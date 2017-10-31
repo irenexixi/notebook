@@ -1,0 +1,91 @@
+
+Windows: cmd 控制台下
+
+下载文档版本包并解压, 并进入目录 e.g. C:\Users\qqli\Downloads\nginx-1.10.2\nginx-1.10.2
+
+一、启动
+
+方法1：双击;
+方法2：nginx.exe;
+方法3：start nginx;
+
+./nginx.exe -h
+
+./nginx.exe -s stop
+
+
+二、停止
+
+方法1：nginx.exe -s stop 快速停止nginx，可能并不保存相关信息
+方法2：nginx.exe -s quit 完整有序的停止nginx，并保存相关信息
+
+ps -ef | grep nginx
+kill -QUIT 主进程号
+
+
+三、重新载入
+
+当配置信息修改，需要重新载入这些配置时使用此命令
+
+nginx.exe -s reload
+
+
+四、查看版本：
+
+nginx -v
+
+
+五、重新打开日志文件
+
+nginx.exe -s reopen
+
+
+
+六、配置
+
+来源：http://blog.csdn.net/tdcqfyl/article/details/51992758
+
+C:\Users\qqli\Downloads\nginx-1.10.2\nginx-1.10.2\conf\nginx.conf
+
+
+# 3. 没有索引页时，罗列文件和子目录
+server {
+    listen       80;
+    server_name  localhost;
+
+    #charset koi8-r;
+
+    #access_log  logs/host.access.log  main;
+
+    #root   html;
+
+    location / {
+        root   C:/Work;
+        index  index.html index.htm;
+    }
+}
+
+autoindex on;
+autoindex_exact_size on;
+#autoindex_localtime on; 这一行不能写在配置里，会报错
+
+# 开启Gzip
+# https://www.darrenfang.com/2015/01/setting-up-http-cache-and-gzip-with-nginx/
+# http://nginx.org/en/docs/http/ngx_http_gzip_static_module.html
+
+# 开启gzip
+gzip on;
+# 启用gzip压缩的最小文件，小于设置值的文件将不会压缩
+gzip_min_length 1k;
+# gzip 压缩级别，1-10，数字越大压缩的越好，也越占用CPU时间，后面会有详细说明
+gzip_comp_level 2;
+# 进行压缩的文件类型。javascript有多种形式。其中的值可以在 mime.types 文件中找到。
+gzip_types text/plain application/javascript application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+# 是否在http header中添加Vary: Accept-Encoding，建议开启
+gzip_vary on;
+# 禁用IE 6 gzip
+gzip_disable "MSIE [1-6]\.";
+
+
+#gzip_comp_level 0-9  gzip_comp_level 大于2时效果并不是很明显。所以可以将值设置为1或者2
+

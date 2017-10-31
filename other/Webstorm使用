@@ -1,0 +1,96 @@
+
+WebStorm
+
+如果当前的编码是GBK, 整个项目切换到UTF-8。File-setting-输入encoding，所有都选择UTF-8，确定后会整个项目转换，但不会转换当前打开的页面，
+针对这个页面选择右下角的编码，选择UTF-8，再选择convert即可。
+
+WebStorm 编辑代码后，chrome自动更新，实时调试
+http://jingyan.baidu.com/article/454316ab68ac03f7a7c03ae3.html?qq-pf-to=pcqq.group
+1. Settings， 输入live edit， 选中Auto in(ms)设置时间，勾选Restart if hotswap fails；
+2. Chrome安装扩展程序 JetBrains IDE Suport;
+3. 选中调试的页面，右键，Debug 'xxx.page';
+
+WebStorm 自动编译less产出css和sourcemap
+http://www.cnblogs.com/caiyuan9426/p/4663199.html
+Settings -> file watch -> less -> 双击 打开配置界面
+Program 一项要存放lessc.cmd的目录
+Arguments 可以不变（--no-color $FileName$）或者是 $FileName$ $FileParentDir$\css\$FileNameWithoutExtension$.css --source-map
+
+
+Intellij IDEA
+
+Ctrl + / 或 Ctrl + Shift + /	注释（// 或者/*…*/ ）
+Shift + F6	重构-重命名
+Ctrl + X	删除行
+Ctrl + D	复制行
+Ctrl + G	查找行
+Ctrl + Alt + L  格式化代码
+Ctrl + R    當前文件替换文本
+Ctrl + F    當前文件查找文本
+ctrl + Shift + N	通过文件名快速查找工程内的文件（必记）
+ctrl + Shift + alt + N	通过一个字符快速查找位置（必记）
+Shift + enter   重新开始一行（无论光标在哪个位置）
+Ctrl + P	方法参数提示
+Ctrl + Shift + Up/Down	代码向上/下移动。
+写代码，按Tab	生成代码
+Ctrl + B 或 Ctrl + 鼠标左键单击   快速打开光标处的类或方法
+Ctrl + Shift + I    打开定义快速查找
+Ctrl + E	最近打开的文件
+Alt + F1	查找代码所在位置
+Ctrl + Alt + T 	with…（if, else, try, catch, for, etc）用 * 来围绕选中的代码行，（ * 包括 if 、 while 、 try catch 等）
+Ctrl + Shift + U	Toggle case for word at caret or selected block 光标所在位置大小写
+Ctrl + Delete	Delete to word end 删除文字结束
+Ctrl + Backspace	Delete to word start 删除文字开始
+
+ctrl + F9 更新编辑器代码，更新代码后执行，浏览器可获取到最新代码
+ctrl + k  使用git 提交代码，取消勾选不需要提交的文件，输入commit msg，选择下面的commit and push
+ctrl + N:10
+ctrl + 空格
+ctrl + F7
+ctrl + Q
+alt +　insert
+
+
+应用市场 dashboard
+
+WebStorm config:
+
+第一步：
+Tools -> deployment -> confuguration -> + (name: dashboard, 点击ok后关掉窗口再重新选择便可出现下面的信息)
+
+第二步：
+Connection:
+FTP host: 172.26.50.37;
+Username: develop; （需要先输入用户名和密码，才可选择连接FTP并选择path）
+Password: Aa123456;
+Port: 21;
+Root path: /data/mie_dev/server/apache-tomcat-7.0.53/webapps/appstore-dashboard
+Web server root url: http://172.26.50.37:8081/appstore-dashboard
+
+Mappings:
+Local path: /data/personal/project/application_market/dashboard/server/src/main/webapp
+Other two: /
+
+第三步：
+
+Tools -> deployment -> 勾选Automaticly upload(always)
+
+git clone address:
+	http://121.40.71.149:7990/projects/APP/repos/dashboard/browse
+	ssh://git@121.40.71.149:7999/app/dashboard.git
+Test address：
+	http://172.26.50.37:8081/appstore-dashboard
+	http://apps-dashboard-test.tclclouds.com/#/behavior/behavior
+On line address：
+	http://apps-dashboard.tclclouds.com/login
+	admin@tcloud.com
+	tcl@store
+
+
+Sublime 快捷键
+
+快捷键： https://www.douban.com/note/362268947/
+来源： https://www.cnsecer.com/460.html 
+
+Ctrl + p 搜索文件
+Ctrl + Shift + p 更改调色板语言

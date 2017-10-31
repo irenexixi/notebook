@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+
+<script>
+    window.onload = function () {
+        //定义变量
+        var a = 1;
+        var b = 'b b';
+        var arr = [1, 2, 3];
+
+        //for 循环
+        for (var i = 0; i < 3; i++) {
+            console.log('i', i);
+        }
+
+        // 原生对象的原型
+        console.log('Array', Array.prototype);
+        console.log('Object', Object.prototype);
+        console.log('String', String.prototype);
+
+        //e.g.
+        arr.push(4);
+        console.log('arr', arr);
+        //字符串转换成数组
+        console.log(b.split(' '));
+        //数组转换成字符串
+        console.log(arr.join('-'));
+
+
+        //继承
+        function Person() {
+            this.method = function () {
+                console.log(this.name);
+            }
+        }
+
+        var xiaoming = new Person();
+        xiaoming.name='xiaoming';
+        xiaoming.method();
+        console.log('xiaoming', xiaoming);
+
+        //异步请求
+        var xmlReq;
+        if (window.XMLHttpRequest) {// code for all new browsers
+            xmlReq = new XMLHttpRequest();
+
+        } else if (window.ActiveXObject) {// code for IE5 and IE6
+            xmlReq = new ActiveXObject("Microsoft.XMLHTTP");
+
+        }
+
+        var paramsSend = {
+            userID: 'uid',
+            name: 'qqli'
+        };
+
+        if (xmlReq != null) {
+            xmlReq.open("POST", './test.json');
+            xmlReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            //xmlReq.setRequestHeader("Content-length", paramsSend.length);
+            //xmlReq.setRequestHeader("Connection", "close");
+            xmlReq.onreadystatechange = successResponse;
+            xmlReq.send(paramsSend);
+
+        } else {
+            alert("Your browser does not support XMLHTTP.");
+        }
+
+        function successResponse() {
+            console.log('request success');
+        }
+    }
+
+</script>
+
+</body>
+</html>

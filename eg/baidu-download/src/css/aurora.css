@@ -1,0 +1,198 @@
+.scenes-ready #stage .auroras {
+    opacity: 1;
+}
+.scenes-ready #stage .aurora-1 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-1-322b435.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 0.2s infinite normal none;
+    -moz-animation: aurora 7s linear 0.2s infinite normal none;
+    animation: aurora 7s linear 0.2s infinite normal none;
+}
+.scenes-ready #stage .aurora-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-2-9872721.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 0.7s infinite normal none;
+    -moz-animation: aurora 7s linear 0.7s infinite normal none;
+    animation: aurora 7s linear 0.7s infinite normal none;
+}
+.scenes-ready #stage .aurora-3 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-3-96add9f.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 1.2s infinite normal none;
+    -moz-animation: aurora 7s linear 1.2s infinite normal none;
+    animation: aurora 7s linear 1.2s infinite normal none;
+}
+.scenes-ready #stage .aurora-4 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-4-131b685.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 1.7s infinite normal none;
+    -moz-animation: aurora 7s linear 1.7s infinite normal none;
+    animation: aurora 7s linear 1.7s infinite normal none;
+}
+.scenes-ready #stage .aurora-5 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-5-3514cd0.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 2.2s infinite normal none;
+    -moz-animation: aurora 7s linear 2.2s infinite normal none;
+    animation: aurora 7s linear 2.2s infinite normal none;
+}
+.scenes-ready #stage .aurora-6 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-4-131b685.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 2.7s infinite normal none;
+    -moz-animation: aurora 7s linear 2.7s infinite normal none;
+    animation: aurora 7s linear 2.7s infinite normal none;
+}
+.scenes-ready #stage .aurora-7 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-3-96add9f.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 3.2s infinite normal none;
+    -moz-animation: aurora 7s linear 3.2s infinite normal none;
+    animation: aurora 7s linear 3.2s infinite normal none;
+}
+.scenes-ready #stage .aurora-8 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-2-9872721.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 3.7s infinite normal none;
+    -moz-animation: aurora 7s linear 3.7s infinite normal none;
+    animation: aurora 7s linear 3.7s infinite normal none;
+}
+.scenes-ready #stage .aurora-9 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-1-322b435.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 4.2s infinite normal none;
+    -moz-animation: aurora 7s linear 4.2s infinite normal none;
+    animation: aurora 7s linear 4.2s infinite normal none;
+}
+.scenes-ready #stage .aurora-10 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-2-9872721.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 4.7s infinite normal none;
+    -moz-animation: aurora 7s linear 4.7s infinite normal none;
+    animation: aurora 7s linear 4.7s infinite normal none;
+}
+.scenes-ready #stage .aurora-11 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-3-96add9f.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 5.2s infinite normal none;
+    -moz-animation: aurora 7s linear 5.2s infinite normal none;
+    animation: aurora 7s linear 5.2s infinite normal none;
+}
+.scenes-ready #stage .aurora-12 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-4-131b685.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 5.7s infinite normal none;
+    -moz-animation: aurora 7s linear 5.7s infinite normal none;
+    animation: aurora 7s linear 5.7s infinite normal none;
+}
+.scenes-ready #stage .aurora-13 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-3-96add9f.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 6.2s infinite normal none;
+    -moz-animation: aurora 7s linear 6.2s infinite normal none;
+    animation: aurora 7s linear 6.2s infinite normal none;
+}
+.scenes-ready #stage .aurora-14 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: url("//liulanqi.baidu.com/theme/images/bg-aurora-2-9872721.png") no-repeat;
+    background-size: 100% auto;
+    -webkit-animation: aurora 7s linear 6.7s infinite normal none;
+    -moz-animation: aurora 7s linear 6.7s infinite normal none;
+    animation: aurora 7s linear 6.7s infinite normal none;
+}
+
+@-webkit-keyframes aurora {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    14% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    28% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+}
+@-moz-keyframes aurora {
+    0% {
+        opacity: 0;
+        -moz-transform: translate3d(0, 0, 0);
+    }
+    14% {
+        opacity: 1;
+        -moz-transform: translate3d(0, 0, 0);
+    }
+    28% {
+        opacity: 0;
+        -moz-transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes aurora {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+    14% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    28% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+}

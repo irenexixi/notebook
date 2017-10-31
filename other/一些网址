@@ -1,0 +1,66 @@
+
+Webstorm lisence server 
+http://idea.imsxm.com
+http://jetbrains.tech
+
+http://iconfont.cn/  阿里妈妈MUX倾力打造的矢量图标管理、交流平台
+
+http://cssreference.io/   A free visual guide to CSS
+
+http://caniuse.com/#search=video 查询兼容
+
+http://www.orrafy.com/posts/web-dev/quickling-1  网页加载优化方案：bigpipe，bigrender，lazyrender
+
+https://forum.leancloud.cn/t/node-js/12451/6  Node.js 开发实践直播
+
+http://lesscss.org/  Less
+
+http://idangero.us/swiper/#.WGR9yrJ96M9  swiper
+
+https://threejs.org/  threejs
+
+http://www.cnblogs.com/qiuzhimutou/p/6379603.html echarts 实线+虚线
+
+http://plus.uc.cn/document/webapp/doc5.html  UC浏览器开发者版本
+移动端需要安装 UC 浏览器开发者版.
+PC 端需要安装 ADB工具，是个压缩文件，解压后双击 exe 文件就 OK 了。
+安装uc到手机：手机usb连接电脑，下载好的uc粘贴到手机的download文件夹下，在手机上访问文件管理-全部文件-download-双击uc浏览器开发者版本进行安装
+首先在移动端打开安装的浏览器，打开需要调试的页面。
+打开 PC 端的 chrome 浏览器（Safari 也可以，建议 chrome），在地址栏输入 手机IP+:9998 ，比如我的是 http://192.168.23.10:9998/
+10.115.110.126, 10.115.101.31 属于同一网络，不同网段， 110和101网段，所以是可以访问的
+
+https://git-scm.com/download/win  git-bash 没有翻墙的情况下下载安装git
+
+
+
+常用工具
+
+xmind 思维导图软件
+
+PS CC 切图
+
+takecolor 吸取颜色
+
+git  代码管理工具
+
+ConEmu64  Windows控制台仿真器选项卡 https://conemu.github.io/
+
+ScreenToGif 录制屏幕
+
+nginx 服务器
+
+navicat-for-mysql 服务器连接工具 https://www.navicat.com.cn/download/navicat-for-mysql
+
+TeamViewer 远程访问工具 https://www.teamviewer.com/zhCN/?pid=google.tv_ex.s.cn&gclid=CJGShJLS99ACFcn0cgodD20HzA
+
+FileZilla 文件上传服务器管理工具
+
+Linux 邮箱设置签名 https://www.lifewire.com/add-image-to-thunderbird-signature-1173166
+
+
+
+zhong ke yuan
+
+后台：http://qcdz.siat.ac.cn/admin.php  用户名：sysadmin  密码：sysamdin
+
+前台：http://qcdz.siat.ac.cn

@@ -1,0 +1,412 @@
+{
+  "Demo": [
+    {
+      "url": "/login",
+      "desc": "login",
+      "mock": true,
+      "delay": 2000,
+      "res": {
+        "code": 200,
+        "msg": "OK",
+        "data": 1
+      }
+    },
+    {
+      "url": "/user/logout",
+      "desc": "login",
+      "mock": true,
+      "delay": 2000,
+      "res": {
+        "code": 200,
+        "msg": "OK"
+      }
+    },
+    {
+      "url": "/app/list",
+      "desc": "app list",
+      "delay": 2000,
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "oh...System error....",
+        "data": {
+          "items|10": [
+            {
+              "appId": "@integer(1-10)",
+              "icon": "@image()",
+              "appName|+1": "Seek Daily@integer( 0, 10 )",
+              "versionCode": "1",
+              "versionName": "V1.2.1",
+              "createdTime": "2016-11-09",
+              "description": "1.push样式优化push样式优化push样式优化push样式优化push样式优化;<br\/>2.分享流程调整....<br\/>3.分享流程调整....",
+              "versionCount": 30,
+              "commentCount": 1006,
+              "downloadUrl": "https://play.google.com/store/apps/details?id=com.Mainews.news"
+            }
+          ],
+          "tatalCount": 30,
+          "pageSize": 3,
+          "pageNo": 2,
+          "totalPage": 10
+        }
+      }
+    },
+    {
+      "url": "/app/view",
+      "desc": "app detail",
+      "delay": 1000,
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "OK",
+        "data": {
+          "appId": 1,
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.Mainews.news",
+          "appName": "seek deily",
+          "createdTime": "2016-11-16",
+          "description": "1. Push样式优化；<br\/>2.分享流程调整；未登录状态下点击分享直接跳转第三方分享登录；<br\/>3.bug修复",
+          "icon": "http://baidu/com",
+          "versionCode": 2,
+          "versionName": "V1.0.1",
+          "imageList": [
+            {
+              "src": "https://placekitten.com/600/400",
+              "w": 600,
+              "h": 400
+            },
+            {
+              "src": "https://placekitten.com/1200/900",
+              "w": 600,
+              "h": 400
+            },
+            {
+              "src": "http://bena-test.s3.amazonaws.com/thumbnail/2016/8/18/2be327c249504e1f96a8a2648e88fdd6.jpeg",
+              "w": 600,
+              "h": 400
+            },
+            {
+              "src": "http://bena-test.s3.amazonaws.com/thumbnail/2016/8/18/2be327c249504e1f96a8a2648e88fdd6.jpeg",
+              "w": 600,
+              "h": 400
+            }
+          ],
+          "commentsList|3": [
+            {
+              "appId": 1,
+              "appName": "seek deily",
+              "comment": "it's ok",
+              "commentTime": "2016-11-15 20:33",
+              "icon": "http://baidu/com",
+              "imageList": [
+                {
+                  "src": "https://placekitten.com/600/400",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "https://placekitten.com/1200/900",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "http://bena-test.s3.amazonaws.com/thumbnail/2016/8/18/2be327c249504e1f96a8a2648e88fdd6.jpeg",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "https://placekitten.com/1200/900",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "http://bena-test.s3.amazonaws.com/thumbnail/2016/8/18/2be327c249504e1f96a8a2648e88fdd6.jpeg",
+                  "w": 600,
+                  "h": 400
+                }
+              ],
+              "score": 3,
+              "status": 1,
+              "topFlag": 1,
+              "userId": 1,
+              "userName": "ciwang",
+              "versionCode": 2,
+              "versionName": "V1.0.1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url": "/download",
+      "desc": "download",
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "OK"
+      }
+    },
+    {
+      "url": "/app/comment/list",
+      "desc": "app comment list",
+      "delay": 2000,
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "msg",
+        "data": {
+          "items|10": [
+            {
+              "appId": 1,
+              "appName": "seek deily@integer( 0, 10 )",
+              "comment": "it's ok",
+              "commentTime": "2016-11-15 20:33",
+              "icon": "http://baidu/com",
+              "imageList": [
+                {
+                  "src": "https://placekitten.com/600/400",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "https://placekitten.com/1200/900",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "http://bena-test.s3.amazonaws.com/thumbnail/2016/8/18/2be327c249504e1f96a8a2648e88fdd6.jpeg",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "https://placekitten.com/1200/900",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "http://bena-test.s3.amazonaws.com/thumbnail/2016/8/18/2be327c249504e1f96a8a2648e88fdd6.jpeg",
+                  "w": 600,
+                  "h": 400
+                }
+              ],
+              "imageUrls": "http://baidu/a.jpg",
+              "score": 3,
+              "status": 1,
+              "userId": 1,
+              "userName": "ciwang ciwang",
+              "versionCode": 2,
+              "versionName": "V1.0.1"
+            }
+          ],
+          "pageNo": 1,
+          "pageSize": 10,
+          "startIndex": 0,
+          "totalCount": 1,
+          "totalPage": 1
+        }
+      }
+    },
+    {
+      "url": "/honour/list",
+      "desc": "honour list",
+      "delay": 3000,
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "msg",
+        "data": {
+          "type": "1",
+          "items|10": [
+            {
+              "userId": "5",
+              "userName": "xixi@integer(1,20)",
+              "acceptCount": "10",
+              "abandonCount": "12"
+            }
+          ],
+          "tatalCount": 30,
+          "pageSize": 3,
+          "pageNo": 2,
+          "totalPage": 10
+        }
+      }
+    },
+    {
+      "url": "/date/list",
+      "desc": "date list",
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "msg",
+        "data": [
+          {
+            "endDate": "2016-11-13",
+            "fromDate": "2016-11-07"
+          },
+          {
+            "endDate": "2016-11-06",
+            "fromDate": "2016-10-31"
+          },
+          {
+            "endDate": "2016-10-30",
+            "fromDate": "2016-10-24"
+          },
+          {
+            "endDate": "2016-10-23",
+            "fromDate": "2016-10-17"
+          },
+          {
+            "endDate": "2016-10-16",
+            "fromDate": "2016-10-10"
+          },
+          {
+            "endDate": "2016-10-09",
+            "fromDate": "2016-10-03"
+          },
+          {
+            "endDate": "2016-10-02",
+            "fromDate": "2016-09-26"
+          },
+          {
+            "endDate": "2016-09-25",
+            "fromDate": "2016-09-19"
+          }
+        ]
+      }
+    },
+    {
+      "url": "/history/honour/list",
+      "desc": "history honour list",
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "msg",
+        "data": {
+          "type": "1",
+          "items|5": [
+            {
+              "userId": "5",
+              "userName": "xixi",
+              "acceptedCount": "122",
+              "abandonCount": "12"
+            }
+          ],
+          "tatalCount": 30,
+          "pageSize": 3,
+          "pageNo": 2,
+          "totalPage": 10
+        }
+      }
+    },
+    {
+      "url": "/user/info",
+      "desc": "user info",
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "msg",
+        "data": {
+          "userName": "xixi",
+          "unreachedNum": 3
+        }
+      }
+    },
+    {
+      "url": "/user/comment/list",
+      "desc": "user info",
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "msg",
+        "delay": 3000,
+        "data": {
+          "items|10": [
+            {
+              "appId": 1,
+              "appName": "seek deily",
+              "comment": "it's ok",
+              "commentTime": "2016-11-15 20:33",
+              "icon": "http://baidu/com",
+              "imageList": [
+                {
+                  "src": "https://placekitten.com/600/400",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "https://placekitten.com/1200/900",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "http://bena-test.s3.amazonaws.com/thumbnail/2016/8/18/2be327c249504e1f96a8a2648e88fdd6.jpeg",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "https://placekitten.com/1200/900",
+                  "w": 600,
+                  "h": 400
+                },
+                {
+                  "src": "http://bena-test.s3.amazonaws.com/thumbnail/2016/8/18/2be327c249504e1f96a8a2648e88fdd6.jpeg",
+                  "w": 600,
+                  "h": 400
+                }
+              ],
+              "imageUrls": "http://baidu/a.jpg",
+              "score": 3,
+              "status": 1,
+              "userId": 1,
+              "userName": "ciwang ciwang",
+              "versionCode": 2,
+              "versionName": "V1.0.1"
+            }
+          ],
+          "tatalCount": 30,
+          "pageSize": 3,
+          "pageNo": 2,
+          "totalPage": 10
+        }
+      }
+    },
+    {
+      "url": "/user/comment/save",
+      "desc": "user comment save",
+      "delay": 3000,
+      "mock": true,
+      "res": {
+        "code": 200,
+        "msg": "ok"
+      }
+    },
+    {
+      "url": "/user/comment/uploadImage",
+      "desc": "user comment upload Image",
+      "mock": true,
+      "delay": 3000,
+      "res": {
+        "code": 200,
+        "msg": "ok",
+        "data": {
+          "h": 220,
+          "src": "http://osg-test.tclclouds.com/swift/v1/gl3/lehuo/20161122/19/56/06/picture.jpg",
+          "w": 330
+        }
+      }
+    },
+    {
+      "url": "/honourList/currentWeekDate",
+      "desc": "honour List current week date",
+      "mock": true,
+      "delay": 3000,
+      "res": {
+        "code": 200,
+        "data": {
+          "endDate": "2016-11-26",
+          "fromDate": "2016-11-21"
+        },
+        "msg": "OK"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+
+    <style>
+        * { margin: 0 }
+
+        .div {
+            width: 200px;
+            padding: 20px;
+            margin: 20px;
+            border: 20px solid #ccc;
+        }
+
+        /*标准合模型，默认box-sizing: content-box;*/
+        .div1 { background: #aaa; }
+
+        /*IE合模型*/
+        .div2 { background: #f00; box-sizing: border-box; }
+
+        div{ font-size: 20px;}
+
+        .div3 {/* position: relative;*/ }
+
+        span { top: 0; }驼峰式
+
+        .div3 span { position: absolute; right: 0; top: 50px; }
+
+        /*class wrapper-div id 驼峰式 */
+
+ </style>
+
+</head>
+<body>
+<div class="div div1" style="background: #0f0" id="id">ee</div>
+<div class="div div2"></div>
+<div class="div div3">
+    <span>ddddd</span>
+</div>
+</body>
+</html>

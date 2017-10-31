@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /*2D转换*/
+        /*通过 rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。*/
+        .rotate-wrap{-webkit-perspective: 200px; perspective: 200px; }
+        .rotate { width: 200px; height: 200px; border: 1px solid #ccc;  transform: rotate(45deg); }
+        .rotate2 { width: 200px; height: 200px; border: 1px solid #ccc;  transform: rotate(45deg) scale(1); }
+
+
+        .div { width: 200px; height: 200px; border: 1px solid #ccc; margin: 20px auto;
+            -webkit-perspective: 200px; perspective: 200px; }
+        /*perspective存在与否决定了你所看到的是2次元的还是3次元的，也就是是2D transform还是3D transform.*/
+
+        .trans { width: 160px; height: 160px; background: #f00; transform-origin: 0 0 0;}
+
+        .rotateXZ45 { transform: rotateX(45deg); }
+
+        .rotateXF45 { transform: rotateX(-45deg); }
+
+
+        .rotateYZ45 { transform: rotateY(45deg); background: #0f0; }
+
+        .rotateYF45 { transform: rotateY(-45deg);background: #0f0; }
+
+
+        .rotateZZ45 { transform: rotateZ(45deg); background: #00F; }
+
+        .rotateZF45 { transform: rotateZ(-45deg);background: #00F; }
+
+    </style>
+</head>
+<body>
+<div class="rotate-wrap">
+    <div class="rotate"></div>
+</div>
+
+<div class="rotate-wrap">
+    <div class="rotate2"></div>
+</div>
+
+<div class="div">
+    <div class="trans rotateXZ45">rotateXZ45</div>
+</div>
+<div class="div">
+    <div class="trans rotateXF45">rotateXF45</div>
+</div>
+
+<div class="div">
+    <div class="trans rotateYZ45">rotateYZ45</div>
+</div>
+<div class="div">
+    <div class="trans rotateYF45">rotateYF45</div>
+</div>
+
+<div class="div">
+    <div class="trans rotateZZ45">rotateZZ45</div>
+</div>
+<div class="div">
+    <div class="trans rotateZF45">rotateZF45</div>
+</div>
+
+
+</body>
+</html>

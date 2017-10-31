@@ -1,0 +1,137 @@
+#stage .space {
+    width: 3840px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: url(//liulanqi.baidu.com/theme/images/bg-space-6e69cd1.png) repeat-x;
+}
+#stage .mountains {
+    width: 100%;
+    height: 17.78125em;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s linear 0s;
+    -moz-transition: opacity 0.2s linear 0s;
+    transition: opacity 0.2s linear 0s;
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    transform-origin: center top;
+}
+#stage .mountain {
+    width: 240em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#stage .mountain-1 {
+    height: 10.5em;
+    z-index: 3;
+    background: url(//liulanqi.baidu.com/theme/images/bg-mountain-1-11661c6.png) repeat-x;
+    background-size: auto 100%;
+}
+#stage .mountain-2 {
+    height: 12em;
+    z-index: 2;
+    background: url(//liulanqi.baidu.com/theme/images/bg-mountain-2-f8a4360.png) repeat-x;
+    background-size: auto 100%;
+}
+#stage .mountain-3 {
+    height: 17.78125em;
+    z-index: 1;
+    background: url(//liulanqi.baidu.com/theme/images/bg-mountain-3-54c28fd.png) repeat-x;
+    background-size: auto 100%;
+}
+
+
+.scenes-ready #stage .space {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: moving 450s linear 0.8s infinite normal none;
+    -moz-animation: moving 450s linear 0.8s infinite normal none;
+    animation: moving 450s linear 0.8s infinite normal none;
+}
+.scenes-ready #stage .mountains {
+    opacity: 1;
+    -webkit-animation: mountains-in 0.8s ease-out 0s 1 normal forwards;
+    -moz-animation: mountains-in 0.8s ease-out 0s 1 normal forwards;
+    animation: mountains-in 0.8s ease-out 0s 1 normal forwards;
+}
+.scenes-ready #stage .mountain-1 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: moving 100s linear 0.8s infinite normal none;
+    -moz-animation: moving 100s linear 0.8s infinite normal none;
+    animation: moving 100s linear 0.8s infinite normal none;
+}
+.scenes-ready #stage .mountain-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: moving 160s linear 0.8s infinite normal none;
+    -moz-animation: moving 160s linear 0.8s infinite normal none;
+    animation: moving 160s linear 0.8s infinite normal none;
+}
+.scenes-ready #stage .mountain-3 {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: moving 360s linear 0.8s infinite normal none;
+    -moz-animation: moving 360s linear 0.8s infinite normal none;
+    animation: moving 360s linear 0.8s infinite normal none;
+}
+@-webkit-keyframes moving {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(-50%, 0, 0);
+    }
+}
+@-moz-keyframes moving {
+    0% {
+        -moz-transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -moz-transform: translate3d(-50%, 0, 0);
+    }
+}
+@keyframes moving {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+@-webkit-keyframes mountains-in {
+    0% {
+        -webkit-transform: scale(1.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+@-moz-keyframes mountains-in {
+    0% {
+        -moz-transform: scale(1.5);
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+@keyframes mountains-in {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

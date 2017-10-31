@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bodymovin Demo</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="bodymovin-master/build/player/bodymovin.js"></script>
+</head>
+<!--<body style="background: #121212;">-->
+<body style="background: url('data/bg.jpg') no-repeat; background-size: 100%" >
+<!--对应3文件夹下面的data-->
+<!--<body style="background: url('data/bg2.jpg') no-repeat; background-size: 100%" >-->
+<!--对应4文件夹下面的data-->
+<div id="animation"></div>
+
+<script>
+    bodymovin.loadAnimation({
+        path: 'data/3/data.json',   //json文件路径
+        loop: true,
+        autoplay: true,
+        renderer: 'canvas',  //渲染方式，有"html"、"canvas"和"svg"三种, html 需要设置html的尺寸
+        container: document.getElementById('animation')
+    });
+    //bodymovin.js的完整api文档见GitHub项目首页(https://github.com/bodymovin/bodymovin)
+</script>
+</body>
+</html>
