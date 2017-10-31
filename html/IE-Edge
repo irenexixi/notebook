@@ -1,0 +1,20 @@
+
+来源：
+http://blog.csdn.net/bingqingsuimeng/article/details/44176233
+http://se.360.cn/v6/help/meta.html
+
+1、网页头部加入
+
+<meta name="renderer" content="webkit"> 360浏览器会在读取到这个标签后，立即切换对应的极速核。
+
+2、另外为了保险起见再加入
+
+<meta http-equiv=”X-UA-Compatible” content=”IE=Edge,chrome=1″>
+
+这样写可以达到的效果是如果安装了GCF，则使用GCF来渲染页面，如果没有安装GCF，则使用最高版本的IE内核进行渲染。
+
+X-UA-Compatible：这是个是IE8的专用标记 , 用来指定IE8浏览器去模拟某个特定版本的IE浏览器的渲染方式(比如人见人烦的IE6)，
+以此来解决部分兼容问题。
+
+谷歌做了个Google Chrome Frame(谷歌内嵌浏览器框架GCF)。这个插件可以让用户的IE浏览器外不变，但用户在浏览网页时，
+实际上使用的是Google Chrome浏览器内核，而且支持IE6、7、8等多个版本的IE浏览器。

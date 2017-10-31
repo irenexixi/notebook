@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<a href="http://www.zhangxinxu.com/wordpress/2011/12/css3-pointer-events-none-javascript/">来源</a>
+
+<p style="position: relative; height: 20px; line-height: 20px;">
+    <a href="test.html" style="position: absolute; left: 0; top: 0; z-index: 1; display: block;">穿透测试</a>
+    <a href="ddd.html"
+       style="position: absolute; left: 0; top: 0; z-index: 2; pointer-events: none; display: block;background: rgba(255, 0, 0, 1);">A标签测试</a>
+</p>
+
+<p>
+    测试结果：上面2个标签使用float时，不能实现穿透的效果，只能实现a标签的事件禁用，手势禁用。
+             换成绝对定位后即可。
+</p>
+
+<p>pointer-events: none; css 就可以阻止冒泡，和默认行为.</p>
+
+<p>dom元素设置了这个属性后 就不接收任何鼠标事件了，包括hover cursor</p>
+
+<p>兼容性：IE10+, 其他都支持</p>
+
+<p>
+    pointer-events是CSS3中又一冉冉的属性，其支持的值牛毛般多，不过大多都与SVG相关，我们可以不用理会。
+    与SVG划开界线值得一提的就是[none|auto]两个属性值了。其中”auto”的感觉与width属性的”auto”类似，
+    一般在一些特殊场合露一手，平时闺门不出，没什么说头。因此，我们需要留意的只是pointer-events:none而已。
+</p>
+
+<p>
+    pointer-events:none顾名思意，就是鼠标事件拜拜的意思。元素应用了该CSS属性，链接啊，点击啊什么的都变成了“浮云牌酱油”。
+</p>
+
+<p>
+    pointer-events:none的作用不只是禁用链接hover，打开链接等效果，是真实意义上的将onlick事件去掉了。
+    如果您反应迅速，创新意识强的话，是不是想到可以利用pointer-events:none实现按钮、选项卡等的禁用效果等。
+</p>
+
+<p>
+    pointer-events:none可以直接让鼠标事件酱油化，但是，其并不能让键盘事件变成打酱油的。因为pointer-events这里是”pointer“，
+    而不是”any“或是”every“之类。
+</p>
+
+<p>对于选项卡，我们使用tab键索引选项卡，会发现，应用了pointer-events:none声明的选项卡可以被focus选中，而且回车的时候，地址栏地址后面增加了”#bound2″</p>
+
+<p>
+    大家有没有研究过a标签+disabled属性这种组合。首先，大家都知道input[type=text|button|radio|checkbox]等控件元素完全支持disabled属性，
+    可以实现事件的完全禁用（附带UI变化）。而a标签呢则是部分浏览器部分支持，由于不是本文重点，这里简单说下。
+    a标签应用disabled属性是无法阻挡任何鼠标经过或是点击事件的（虽然IE下置灰文字看上去可以禁用），因此，在实际web开发的时候，
+    我们不对a标签应用disabled属性。但是，实际上，您可能不知道的是，在绝大多数浏览器下，a标签应用disabled可以禁用键盘事件（避开tab键的索引）。
+</p>
+
+<p>
+    Chrome或是Safari（需要设置偏好设置）下查看上面的实例页面，会发现应用了disabled属性的a标签还是可以被键盘捕获（
+    内阴影效果呈现，回车URL地址改变）。
+</p>
+
+<p>
+    在a标签元素的href属性上动刀子。a标签元素之所以能够响应键盘索引，其关键就在于href属性。有了这个，浏览器会认为这个a元素是个链接之类，
+    可以跳转，考虑到可访问性，有必要支持键盘响应。否则，当作摆设元素处理。所以
+    无href + pointer-events:none禁用demo
+    <a class="tab_a tab_on" style="pointer-events:none;">年终奖</a>
+</p>
+
+<p>
+    pointer-events:none情感化认识, pointer-events:none的作用是让元素实体“虚化”。例如一个应用pointer-events:none的按钮元素，
+    则我们在页面上看到的这个按钮，只是一个虚幻的影子而已，您可以理解为海市蜃楼，幽灵的躯体。
+    当我们用手触碰它的时候可以轻易地没有任何感觉地从中穿过去。一切都是幻影!
+</p>
+
+</body>
+</html>

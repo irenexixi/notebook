@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img标签没有设置src的值或src属性不存在都会出现边框</title>
+    <link rel="stylesheet" href="../layout/css/reset.css"/>
+</head>
+<body>
+
+<div>
+    <img src="" width="200" height="200">
+</div>
+
+<div>
+    <img src="../layout/img/transparent.png" width="200" height="200">
+</div>
+
+<div>
+    <p>最简单的解决方法是，给src赋值一个透明的png图，在外观上也看不出来。</p>
+    <p>通过改变img的宽度高度也是不能解决问题的</p>
+</div>
+
+</body>
+</html>

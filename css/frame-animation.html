@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>帧序列动画</title>
+    <style>
+        .animate {
+            animation-iteration-count: infinite; /*无限循环*/
+            animation-timing-function: linear; /*匀速*/
+            animation-duration: 1300ms; /*动画时间*/
+            animation-name: loading;
+            animation-play-state: running, paused, running; /*动画状态 测试发现只有第一个值才生效，后面的值没有任何效果*/
+
+            /*animation-fill-mode: both;  /!*none|forwards|backwards|both*!/*/
+
+            width: 105px;
+            height: 63px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: 0 0;
+        }
+
+        @-webkit-keyframes loading {
+            0% {
+                background-image: url("../layout/img/animate-loading/loading_0000_morph-shape-25.png");
+            }
+            4% {
+                background-image: url("../layout/img/animate-loading/loading_0001_morph-shape-24.png");
+            }
+            8% {
+                background-image: url("../layout/img/animate-loading/loading_0002_morph-shape-23.png");
+            }
+            12% {
+                background-image: url("../layout/img/animate-loading/loading_0003_morph-shape-22.png");
+            }
+            16% {
+                background-image: url("../layout/img/animate-loading/loading_0004_morph-shape-21.png");
+            }
+            20% {
+                background-image: url("../layout/img/animate-loading/loading_0005_morph-shape-20.png");
+            }
+            24% {
+                background-image: url("../layout/img/animate-loading/loading_0006_morph-shape-19.png");
+            }
+            28% {
+                background-image: url("../layout/img/animate-loading/loading_0007_morph-shape-18.png");
+            }
+            32% {
+                background-image: url("../layout/img/animate-loading/loading_0008_morph-shape-17.png");
+            }
+            36% {
+                background-image: url("../layout/img/animate-loading/loading_0009_morph-shape-16.png");
+            }
+            40% {
+                background-image: url("../layout/img/animate-loading/loading_0010_morph-shape-15.png");
+            }
+            44% {
+                background-image: url("../layout/img/animate-loading/loading_0011_morph-shape-14.png");
+            }
+            48% {
+                background-image: url("../layout/img/animate-loading/loading_0012_morph-shape-13.png");
+            }
+            52% {
+                background-image: url("../layout/img/animate-loading/loading_0013_morph-shape-12.png");
+            }
+            56% {
+                background-image: url("../layout/img/animate-loading/loading_0014_morph-shape-11.png");
+            }
+            60% {
+                background-image: url("../layout/img/animate-loading/loading_0015_morph-shape-10.png");
+            }
+            64% {
+                background-image: url("../layout/img/animate-loading/loading_0016_morph-shape-9.png");
+            }
+            68% {
+                background-image: url("../layout/img/animate-loading/loading_0017_morph-shape-8.png");
+            }
+            72% {
+                background-image: url("../layout/img/animate-loading/loading_0018_morph-shape-7.png");
+            }
+            76% {
+                background-image: url("../layout/img/animate-loading/loading_0019_morph-shape-6.png");
+            }
+            80% {
+                background-image: url("../layout/img/animate-loading/loading_0020_morph-shape-5.png");
+            }
+            84% {
+                background-image: url("../layout/img/animate-loading/loading_0021_morph-shape-4.png");
+            }
+            88% {
+                background-image: url("../layout/img/animate-loading/loading_0022_morph-shape-3.png");
+            }
+            92% {
+                background-image: url("../layout/img/animate-loading/loading_0023_morph-shape-2.png");
+            }
+            96% {
+                background-image: url("../layout/img/animate-loading/loading_0024_morph-shape-1.png");
+            }
+            100% {
+                background-image: url("../layout/img/animate-loading/loading_0000_morph-shape-25.png");
+            }
+        }
+
+        @keyframes loading {
+            0% {
+                background-image: url("../layout/img/animate-loading/loading_0000_morph-shape-25.png");
+            }
+            4% {
+                background-image: url("../layout/img/animate-loading/loading_0001_morph-shape-24.png");
+            }
+            8% {
+                background-image: url("../layout/img/animate-loading/loading_0002_morph-shape-23.png");
+            }
+            12% {
+                background-image: url("../layout/img/animate-loading/loading_0003_morph-shape-22.png");
+            }
+            16% {
+                background-image: url("../layout/img/animate-loading/loading_0004_morph-shape-21.png");
+            }
+            20% {
+                background-image: url("../layout/img/animate-loading/loading_0005_morph-shape-20.png");
+            }
+            24% {
+                background-image: url("../layout/img/animate-loading/loading_0006_morph-shape-19.png");
+            }
+            28% {
+                background-image: url("../layout/img/animate-loading/loading_0007_morph-shape-18.png");
+            }
+            32% {
+                background-image: url("../layout/img/animate-loading/loading_0008_morph-shape-17.png");
+            }
+            36% {
+                background-image: url("../layout/img/animate-loading/loading_0009_morph-shape-16.png");
+            }
+            40% {
+                background-image: url("../layout/img/animate-loading/loading_0010_morph-shape-15.png");
+            }
+            44% {
+                background-image: url("../layout/img/animate-loading/loading_0011_morph-shape-14.png");
+            }
+            48% {
+                background-image: url("../layout/img/animate-loading/loading_0012_morph-shape-13.png");
+            }
+            52% {
+                background-image: url("../layout/img/animate-loading/loading_0013_morph-shape-12.png");
+            }
+            56% {
+                background-image: url("../layout/img/animate-loading/loading_0014_morph-shape-11.png");
+            }
+            60% {
+                background-image: url("../layout/img/animate-loading/loading_0015_morph-shape-10.png");
+            }
+            64% {
+                background-image: url("../layout/img/animate-loading/loading_0016_morph-shape-9.png");
+            }
+            68% {
+                background-image: url("../layout/img/animate-loading/loading_0017_morph-shape-8.png");
+            }
+            72% {
+                background-image: url("../layout/img/animate-loading/loading_0018_morph-shape-7.png");
+            }
+            76% {
+                background-image: url("../layout/img/animate-loading/loading_0019_morph-shape-6.png");
+            }
+            80% {
+                background-image: url("../layout/img/animate-loading/loading_0020_morph-shape-5.png");
+            }
+            84% {
+                background-image: url("../layout/img/animate-loading/loading_0021_morph-shape-4.png");
+            }
+            88% {
+                background-image: url("../layout/img/animate-loading/loading_0022_morph-shape-3.png");
+            }
+            92% {
+                background-image: url("../layout/img/animate-loading/loading_0023_morph-shape-2.png");
+            }
+            96% {
+                background-image: url("../layout/img/animate-loading/loading_0024_morph-shape-1.png");
+            }
+            100% {
+                background-image: url("../layout/img/animate-loading/loading_0000_morph-shape-25.png");
+            }
+        }
+    </style>
+</head>
+<body>
+<a href="http://cssreference.io/">参考文档1</a>
+<br/>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state">参考文档2</a>
+
+<div class="animate"></div>
+</body>
+</html>

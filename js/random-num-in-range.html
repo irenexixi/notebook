@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取某范围内的随机数</title>
+</head>
+<body>
+<h4>获取某范围内的随机数</h4>
+<script>
+    //小于10的随机整数
+    var num_a = parseInt(Math.random() * 10);
+    console.log('num_a', num_a);
+
+    //5-10之间的随机整数
+    var num_b = parseInt(Math.random() * 6) + 5;
+    console.log('num_b', num_b);
+
+
+    //获取1-10之间的随机小数
+    var num_c = parseInt(Math.random() * 100) / 10;
+    console.log('num_c', num_c);
+
+    //https://lodash.com/docs/4.17.4#random  lodash 实现方法
+    //Produces a random number between the inclusive lower and upper bounds.
+    //_.random(0, 5);
+    // => an integer between 0 and 5
+
+    //https://lodash.com/docs/4.17.4#sampleSize
+    //Returns the random elements.
+    //_.sampleSize([1, 2, 3], 4);
+    // => [2, 3, 1]
+
+
+
+</script>
+</body>
+</html>

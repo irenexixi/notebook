@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数节流测试</title>
+</head>
+<body>
+<div>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+    <p>ddd</p>
+</div>
+<script type="text/javascript">
+    //    方法1
+    /*var n = 0;
+     function resizehandler() {
+     console.log(new Date().getTime());
+     console.log(++n);
+     }
+
+     function throttle(method, context) {
+     clearTimeout(method.tId);
+     method.tId = setTimeout(function () {
+     method.call(context);
+     }, 500);
+     }
+
+     window.onscroll = function () {
+     console.log('onscroll')
+     throttle(resizehandler, window);
+     };*/
+
+    //    方法2
+    /*var m = 0;
+     function resizehandler() {
+     console.log(new Date().getTime());
+     console.log(++m);
+     }
+
+     function throttle(method, context) {
+     console.log('throttle')
+     var timer = null;
+
+     return function () {
+     clearTimeout(timer);
+     timer = setTimeout(function () {
+     method.call(context);
+     }, 500);
+     }
+     }
+
+     window.onscroll = throttle(resizehandler, window);*/
+
+    //    方法3
+    var m = 0;
+    var timer = null;
+    function resizehandler() {
+        console.log(new Date().getTime());
+        console.log(++m);
+    }
+
+    function throttle() {
+
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            resizehandler.call(window);
+        }, 500);
+    }
+
+    window.onscroll = throttle;
+</script>
+</body>
+</html>

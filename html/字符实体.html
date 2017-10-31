@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符实体</title>
+    <link rel="stylesheet" href="../layout/css/reset.css"/>
+</head>
+<body>
+<div>
+    <a href="http://www.zhangxinxu.com/wordpress/2011/05/web%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E5%8F%AF%E7%94%A8%E5%AD%97%E7%AC%A6%E4%BB%8B%E7%BB%8D/"
+       target="_blank">张鑫旭</a>
+
+    <a href="http://www.cnblogs.com/fsjohnhuang/p/4319483.html" target="_blank">博客文档</a>
+</div>
+
+<div>
+    <strong>字符实体有三种表示方式：</strong>
+    <p> &nbsp;</p>
+
+    <p> // Named character reference(实体名) </p>
+    <p> // 示例：&nbsp;</p>
+    <p> &entity_name; </p>
+    <p> &nbsp;</p>
+
+    <p> // Decimal numeric character reference(十进制实体编号)</p>
+    <p> // 示例：&#229</p>
+    <p> &#entity_number;</p>
+    <p> &nbsp;</p>
+
+    <p> // Hexademical numeric character reference(十六进制实体编号)</p>
+    <p> // 示例：&#x6C34</p>
+    <p> &#xentity_number;</p>
+</div>
+
+<div>
+    <p> 实体名好处是便于记忆，但不一定所有浏览器能识别所有实体名。</p>
+    <p> 而所有浏览器均能识别所有的实体编号。</p>
+    <p> 注意：实体名是大小写敏感的哦！</p>
+</div>
+
+<div>
+    <strong>3种实体类型</strong>
+    <p>&nbsp;</p>
+
+    <p>ASCII实体</p>
+    <p>字符实体</p>
+    <p>符号实体(<a href="http://www.zhangxinxu.com/sp/character.html" target="_blank">查看详情</a>)</p>
+</div>
+
+<div>
+    <strong>空格专题</strong>
+
+    <div>
+        <strong>&amp;nbsp;</strong>
+        <p>这是我们使用最多的空格，也就是按下space键产生的空格。在HTML中，如果你用空格键产生此空格，空格是不会累加的（只算1个）。要使用html实体表示才可累加。为了便于记忆，我总是把这个空格成为“牛逼(nb)空格(sp
+            -
+            space)”，虽然实际上并不牛逼。该空格占据宽度受字体影响明显而强烈。在inline-block布局中会搞些小破坏，在两端对齐布局中又是不可少的元素。是个让人又爱又恨的小东东。这个以后有机会要好好说说。 </p>
+
+        <strong>&amp;ensp;</strong>
+        <p>该空格学名不详。为了便于记忆，我们不妨就叫它“恶念(e n-ian)空格”。此空格传承空格家族一贯的特性：透明滴！此空格有个相当稳健的特性，就是其占据的宽度正好是1/2个中文宽度，而且基本上不受字体影响。</p>
+
+        <strong>&amp;emsp;</strong>
+        <p>该空格学名不详。为了便于记忆，我们不妨就叫它"恶魔(e m-o)空格"。此空格也传承空格家族一贯的特性：透明滴！此空格也有个相当稳健的特性，就是其占据的宽度正好是1个中文宽度，而且基本上不受字体影响。</p>
+
+        <strong>&amp;thinsp;</strong>
+        <p>该空格学名不详。我们不妨称之为“瘦弱空格”，就是该空格长得比较瘦弱，身体单薄，占据的宽度比较小。我目前是没用过这个东西，这里亮出来是让其过一下群众演员的瘾。</p>
+    </div>
+</div>
+
+
+<div>&quot;&lsaquo;&rsaquo;</div>
+
+
+<div>
+    <strong>JS实现HTML标签转义及反转义</strong>
+
+    <input id="escapeIpt" type="text">
+
+    <p id="escapeIptHTML"></p>
+
+    <p id="encodeText"></p>
+    <p id="decodeText"></p>
+</div>
+
+<script>
+    var escapeIpt = document.querySelector('#escapeIpt');
+    var escapeIptHTML = document.querySelector('#escapeIptHTML');
+    escapeIpt.addEventListener('change', function (e) {
+        console.log('e', e);
+        var escapeIptInnerVal = e.target.value;
+        console.log('escapeIptInnerVal', escapeIptInnerVal);
+
+        escapeIptHTML.innerHTML = escapeIptInnerVal;
+        escapeIptHTML.innerHTML = escapeIptHTML.innerText;
+    });
+
+    // 转义
+    function HTMLEncode(html) {
+        var temp = document.createElement("div");
+        (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
+        var output = temp.innerHTML;
+        temp = null;
+        return output; //&lt;p&gt;&lt;b&gt;123&amp;456&lt;/b&gt;&lt;/p&gt;
+    }
+
+    // 反转义
+    function HTMLDecode(text) {
+        var temp = document.createElement("div");
+        temp.innerHTML = text;
+        var output = temp.innerText || temp.textContent;
+        temp = null;
+        return output; //<p><b>123&456</b></p>
+    }
+
+    var tagText = "<p><b>123&456</b></p>";
+    var encodeText = HTMLEncode(tagText);
+    document.querySelector('#encodeText').innerText = '转义：' + encodeText;
+    document.querySelector('#decodeText').innerText = '反转义：' + HTMLDecode(encodeText);
+    console.log('encodeText', encodeText);//&lt;p&gt;&lt;b&gt;123&amp;456&lt;/b&gt;&lt;/p&gt;
+    console.log('decodeText', HTMLDecode(encodeText)); //<p><b>123&456</b></p>
+</script>
+
+
+</body>
+</html>

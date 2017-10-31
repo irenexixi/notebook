@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>删除数组中的一个元素</title>
+<body>
+
+<script>
+    //方法一：
+    var arr = ['a', 'b', 'c'];
+
+    //获取要删除元素的索引
+    var i = arr.indexOf('b');
+    console.log('i', i);  //i：1
+
+    //删除字母b：
+    var newArr = arr.splice(i, 1);
+    console.log('newArr', newArr);    //newArr: ["b"];
+    console.log('arr', arr);    //arr: ["a", "c"]
+
+    //注意：indexOf() 兼容性：ie9+,其他浏览器都可以
+</script>
+
+
+<script>
+    //方法二：
+    var arr2 = ['a', 'b', 'c'];
+
+    //获取要删除元素的索引
+    var index = 0;
+    for (var j = 0; j < arr2.length; j++) {
+        if (arr2[j] === 'b') {
+            index = j;
+            break;
+        }
+    }
+    console.log('index', index); //i：1
+
+    //删除字母b：
+    var newArr2 = arr2.splice(index, 1);
+    console.log('newArr2', newArr2);    //newArr: ["b"];
+    console.log('arr2', arr2);    //arr: ["a", "c"]
+
+</script>
+</body>
+
+</html>

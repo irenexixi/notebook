@@ -1,0 +1,45 @@
+
+placeholder 是 HTML 5 <input> 的属性，是表单元素input的一个占位符。
+
+兼容性 [caniuse](http://caniuse.com/#search=placeholder)input
+
+ie 11+
+firefox 49+
+chrome 49+
+safari 9.1+
+Opera 41+
+iOS Safari 9.3+
+Opera Mini all
+Android Browser 4.4+
+Chrome for Android 53+
+
+通过下面几行代码就可以 设置一个兼容的placeholder文字颜色。
+
+修改所有的input
+
+::-webkit-input-placeholder {
+  color: red;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: red;
+}
+::-moz-placeholder{ /* Firefox 19+ */
+ color: red;
+}
+:-ms-input-placeholder {
+  color: red;
+}
+
+修改某个标签
+
+#myInput::-webkit-input-placeholder {
+  color: red;
+}
+
+#myInput:-moz-placeholder {
+  color: red;
+}
+
+#myInput:-ms-input-placeholder {
+  color: red;
+}

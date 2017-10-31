@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lodash</title>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+</head>
+<body>
+
+<p><a href="http://lodashjs.com/docs/#_mapkeysobject-iteratee_identity-thisarg">文档</a></p>
+
+<div>
+    <strong>_.mapKeys(object, [iteratee=_.identity], [thisArg])</strong>
+    <p>遍历对象的 key， 返回的值是新的key</p>
+
+    <strong>_.snakeCase([string=''])</strong>
+    <p>Converts string to snake case.</p>
+
+    <strong>_.camelCase([string=''])</strong>
+    <p>Converts string to camel case.</p>
+</div>
+
+
+<script>
+    window.onload = function () {
+        var obj1 = {'versionId': 1, 'versionNum': 2};
+        var newObj1 = _.mapKeys(obj1, function (value, key) {
+            // console.log('value', value) // 1, 2
+            // console.log('key', key) //version_id version_num
+            _.snakeCase(key);
+
+            return _.snakeCase(key);
+        });
+        console.log('newObj1', newObj1);
+
+
+
+        var obj2 = {'version_id': 1, 'version_num': 2};
+        var newObj2 = _.mapKeys(obj2, function (value, key) {
+            return _.camelCase(key);
+        });
+        console.log('newObj2', newObj2);
+    }
+</script>
+
+</body>
+</html>

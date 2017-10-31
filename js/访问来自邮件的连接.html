@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问来自邮件的链接，登录页面后需要进入对应的页面</title>
+</head>
+<body>
+
+<script>
+// 访问这个地址 https://spms.migu.cn:10443/spms/static/task/index.html#/task/list/422?category=2
+// 页面超时回到登录界面 window.location.href = "../../login.html?next=" + encodeURIComponent(window.location.href);
+// 因为没有登录，跳到登录界面的地址
+// https://spms.migu.cn:10443/spms/login.html?next=https%3A%2F%2Fspms.migu.cn%3A10443%2Fspms%2Fstatic%2Ftask%2Findex.html%23%2Ftask%2Flist%2F422%3Fcategory%3D2
+
+    window.onload = function () {
+        var getSearchParam = function (key) {
+            debugger;
+
+            var reg = new RegExp("(?:&?)" + key + "=([^&]*)(?:&?)", "g");
+
+            var results = [], tempArray,
+                searchString = window.location.search;
+
+            var searchString = "?next=https%3A%2F%2Fspms.migu.cn%3A10443%2Fspms%2Fstatic%2Ftask%2Findex.html%23%2Ftask%2Flist%2F422%3Fcategory%3D2";
+
+            while (tempArray = reg.exec(searchString)) {
+                results = results.concat(decodeURIComponent(tempArray[1]));
+            }
+
+            return results.length > 1 ? results : results[0]
+
+        };
+
+        var nextHref = getSearchParam('next');
+    }
+</script>
+
+</body>
+</html>

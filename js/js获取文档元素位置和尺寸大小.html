@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js获取浏览器元素位置和尺寸大小</title>
+    <link rel="stylesheet" href="../layout/css/reset.css"/>
+    <style>
+        #divDisplay {
+            background-color: #0f0;
+            margin: 30px;
+            padding: 10px;
+            /*height: 200px;*/
+            width: 400px;
+            border: solid 3px #f00;
+        }
+    </style>
+</head>
+
+<body style="border: 5px solid #f00;">
+
+<div>
+    <a href="http://www.jb51.net/article/19844.htm">来源</a>
+</div>
+<div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</div>
+
+<div id="divDisplay"></div>
+<div>
+    <button type="button" id="btn1">获取当前水平坐标</button>
+</div>
+
+<script>
+    window.onload = function () {
+        var div = document.getElementById('divDisplay');
+
+        // body对象尺寸
+        var clientWidth = document.body.clientWidth;
+        var clientHeight = document.body.clientHeight;
+        div.innerHTML += 'body对象尺寸 clientWidth: ' + clientWidth + '<br/>';
+        div.innerHTML += 'body对象尺寸 clientHeight: ' + clientHeight + '<br/><br/>';
+
+
+        // body对象尺寸(包括border的尺寸)
+        var bodyOffsetWidth = document.body.offsetWidth;
+        var bodyOffsetHeight = document.body.offsetHeight;
+        div.innerHTML += 'body对象尺寸 offsetWidth: ' + bodyOffsetWidth + '<br/>';
+        div.innerHTML += 'body对象尺寸 offsetWidth: ' + bodyOffsetHeight + '<br/><br/>';
+
+
+        // body对象尺寸(包括border的尺寸)
+        var bodyScrollWidth = document.body.scrollWidth;
+        var bodyScrollHeight = document.body.scrollHeight;
+        div.innerHTML += 'body对象尺寸 scrollWidth: ' + bodyScrollWidth + '<br/>';
+        div.innerHTML += 'body对象尺寸 scrollHeight: ' + bodyScrollHeight + '<br/><br/>';
+
+
+        //网页被卷去的尺寸
+        var bodyScrollTop = document.body.scrollTop;
+        var bodyScrollLeft = document.body.scrollLeft;
+        div.innerHTML += 'body对象尺寸 scrollTop: ' + bodyScrollTop + '<br/>';
+        div.innerHTML += 'body对象尺寸 scrollLeft: ' + bodyScrollLeft + '<br/><br/>';
+
+        // 可见区域尺寸
+        // The Document.documentElement read-only property returns the Element that is the root element of the document
+        // (for example, the <html> element for HTML documents).
+        var documentClientWidth = document.documentElement.clientWidth;
+        var documentClientHeight = document.documentElement.clientHeight;
+        div.innerHTML += 'document对象尺寸 clientWidth: ' + documentClientWidth + '<br/>';
+        div.innerHTML += 'document对象尺寸 clientHeight: ' + documentClientHeight + '<br/><br/>';
+
+        var rootElement = document.documentElement;
+        var firstTier = rootElement.childNodes;
+        console.log('rootElement lang: ', rootElement.getAttribute("lang")); //rootElement lang:  en
+        for (var i = 0; i < firstTier.length; i++) {
+            console.log('firstTier', firstTier); //[head, text, body]
+            console.log('firstTier[i]:', firstTier[i]);
+        }
+        // 若没有定义W3C的标准，则 IE为：
+        // document.documentElement.clientWidth ==> 0
+        // document.documentElement.clientHeight ==> 0
+
+
+        var windowScreenTop = window.screenTop;
+        var windowScreenLeft = window.screenLeft;
+        div.innerHTML += '浏览器窗口距离显示屏顶部的距离: ' + windowScreenTop + '<br/>';
+        div.innerHTML += '浏览器窗口距离显示屏左边的距离: ' + windowScreenLeft + '<br/><br/>';
+
+
+        //屏幕分辨率的高： window.screen.height，缩放浏览器窗口没有用
+        //屏幕分辨率的宽： window.screen.width，缩放浏览器窗口没有用
+        var windowScreenWidth = window.screen.width;
+        var windowScreenHeight = window.screen.height;
+        div.innerHTML += '电脑屏幕分辨率的宽度: ' + windowScreenWidth + '<br/>';
+        div.innerHTML += '电脑屏幕分辨率的高度: ' + windowScreenHeight + '<br/><br/>';
+
+        //屏幕可用工作区高度： window.screen.availHeight
+        //屏幕可用工作区宽度： window.screen.availWidth
+        var windowScreenAvailWidth = window.screen.availWidth;
+        var windowScreenAvailHeight = window.screen.availHeight;
+        div.innerHTML += '屏幕可用工作区宽度: ' + windowScreenAvailWidth + '<br/>';
+        div.innerHTML += '屏幕可用工作区高度: ' + windowScreenAvailHeight + '<br/><br/>';
+
+        document.addEventListener('click', function (e) {
+            console.log('e', e);
+            div.innerHTML += 'e.clientX: ' + e.clientX + '<br/>';
+            div.innerHTML += 'e.clientY: ' + e.clientY + '<br/>';
+
+        }, false)
+    }
+</script>
+
+</body>
+</html>

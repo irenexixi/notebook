@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*svg1 打钩*/
+        /*var html
+
+        =
+        '<span class="checked-in-corner">'
+        +
+        '<span class="SVGInline check">'
+        +
+        '<svg class="SVGInline-svg check-svg" style="width: 0.8em;height: 0.8em;" xmlns="http://www.w3.org/2000/svg" width="1024"'
+        +
+        ' height="1024" viewBox="0 0 1024 1024"><path class="svgpath" data-index="path_0" fill="#272636" d="M887.904 298.208c-12.864-'
+        +
+        '12.064-33.152-11.488-45.216 1.408L415.936 753.984l-233.12-229.696c-12.608-12.416-32.864-12.288-45.28.32-12.416 12.576-12.256 '
+        +
+        '32.864.352 45.248l256.48 252.672c.096.096.224.128.32.224s.128.224.224.32c2.016 1.92 4.448 3.008 6.784 4.288 1.152.672 2.144 '
+        +
+        '1.664 3.36 2.144 3.776 1.472 7.776 2.24 11.744 2.24 4.192 0 8.384-.832 12.288-2.496 1.312-.544 2.336-1.664 3.552-2.368 2.4-1.408 '
+        +
+        '4.896-2.592 6.944-4.672.096-.096.128-.256.224-.352.064-.096.192-.128.288-.224L889.28 343.424c12.16-12.832 11.488-33.088-1.376-45.216z">'
+        +
+        '</path></svg></span></span>'
+        ;*/
+
+        .column1 img {
+            max-width: 560px;
+        }
+
+        #svg1 {
+            border: 1px solid #aaa;
+            width: 24px;
+            height: 24px;;
+        }
+
+        #svg2 {
+            width: 24px;
+            height: 24px;;
+        }
+    </style>
+</head>
+<body>
+
+<!--图片，背景，框架引入svg文件-->
+<img class="alignnone size-large wp-image-1132 lazy " style="width: 250px;" alt="kiwi"
+     src="../layout/img/kiwi.svg">
+
+<!--SVG对象(object)的用法-->
+<object width="200" height="200" type="image/svg+xml" data="../layout/img/kiwi.svg" class="logo">
+    新西兰鹬鸵鸟 <!-- 图片备份支持 -->
+</object>
+
+
+<!-- 直接html中使用 -->
+<svg id="svg1" xmlns="http://www.w3.org/2000/svg">
+    <line x1="4" y1="8" x2="10" y2="18" style="stroke: #bbb; stroke-width: 2"/>
+    <line x1="10" y1="18" x2="20" y2="5" style="stroke: #bbb; stroke-width: 2"/>
+</svg>
+
+<svg id="svg2" xmlns="http://www.w3.org/2000/svg">
+    <line x1="5" y1="12" x2="20" y2="3" style="stroke: #bbb; stroke-width: 2"/>
+    <line x1="5" y1="12" x2="20" y2="21" style="stroke: #bbb; stroke-width: 2"/>
+</svg>
+
+<div id="div1">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <circle cx="100" cy="100" r="40" fill="red"></circle>
+    </svg>
+
+    <svg id="svgCircleTutorial" height="250" xmlns="http://www.w3.org/2000/svg">
+        <circle id="myCircle" cx="55" cy="55" r="50" fill="#00f" stroke="#f00" stroke-width="2"/>
+    </svg>
+
+    <svg id="svgRectangleTutorial" height="200" xmlns="http://www.w3.org/2000/svg">
+        <rect id="myRectangle" width="300" height="100" stroke="#f00" stroke-width="2" fill="#00f"
+              fill-opacity="0.5" stroke-opacity="0.5"/>
+    </svg>
+
+    <svg id="svgEllipseTutorial" height="150" xmlns="http://www.w3.org/2000/svg">
+        <ellipse id="myEllipse" cx="120" cy="60" rx="100" ry="50" style="fill:#3F5208;stroke:black;stroke-width:3"/>
+    </svg>
+
+</div>
+<!--http://www.webhek.com/svg/-->
+<!--https://www.oschina.net/question/89964_62708-->
+<!--http://blog.csdn.net/sadfishsc/article/details/6973523-->
+<!--http://blog.csdn.net/flower46273736/article/details/51678404-->
+<!--http://www.cnblogs.com/depsi/p/5056250.html-->
+<script>
+    window.onload = function () {
+        console.log('Modernizr.svg', Modernizr.svg);
+        //用Modernizr测试浏览器的支持情况，必要时以普通图片代替：
+        //这个方法试过了 没有用
+        if (!Modernizr.svg) {
+            $(".logo img").attr("src", "images/logo.png");
+        }
+    }
+</script>
+</body>
+</html>

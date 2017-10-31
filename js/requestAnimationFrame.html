@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>requestAnimationFrame请求动画帧</title>
+</head>
+<body>
+
+<div>
+    <a href="http://www.zhangxinxu.com/wordpress/2013/09/css3-animation-requestanimationframe-tween-%E5%8A%A8%E7%94%BB%E7%AE%97%E6%B3%95/">来源</a>
+</div>
+
+<div>
+    <p>显示器16.7ms刷新间隔, 每秒60帧</p>
+
+    <p>setTimeout的定时器值推荐最小使用16.7ms的原因（16.7 = 1000 / 60, 即每秒60帧），若小于16.7ms则过度绘制就会导致动画断续显示</p>
+
+</div>
+
+<div>
+    <p> requestAnimationFrame 可以跟着浏览器的绘制走，如果浏览设备绘制间隔是 16.7ms，那就这个间隔绘制；如果浏览设备绘制间隔是 10ms,
+        就 10ms 绘制。这样就不会存在过度绘制的问题，动画也不会掉帧。</p>
+
+    <p>浏览器页面每次重绘，都会通知 requestAnimationFrame</p>
+
+    <p>如果有多个 requestAnimationFrame， 浏览器只需要通知一次，而 setTimeout 貌似是多个独立绘制</p>
+
+    <p>页面最小化了，或者被 Tab 切换了，页面是不会重绘的，requestAnimationFrame 也不会执行（没有通知）。页面绘制全部停止，资源高效利用。</p>
+</div>
+
+<div>
+    <p>兼容性：ie11+， chrome22+, safari6+, Android Browser4.4+, chrome for android 55+</p>
+</div>
+
+<div>
+    <button type="button" id="scrollButton">scrollButton</button>
+</div>
+
+<script>
+    (function () {
+        var lastTime = 0;
+        var vendors = ['webkit', 'moz'];
+        for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+            window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+            window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] ||    // name has changed in Webkit
+                    window[vendors[x] + 'CancelRequestAnimationFrame'];
+        }
+
+        if (!window.requestAnimationFrame) {
+            window.requestAnimationFrame = function (callback, element) {
+                var currTime = new Date().getTime();
+                var timeToCall = Math.max(0, 16.7 - (currTime - lastTime));
+                var id = window.setTimeout(function () {
+                    callback(currTime + timeToCall);
+                }, timeToCall);
+                lastTime = currTime + timeToCall;
+                return id;
+            };
+        }
+        if (!window.cancelAnimationFrame) {
+            window.cancelAnimationFrame = function (id) {
+                clearTimeout(id);
+            };
+        }
+    }());
+
+
+
+    document.getElementById("scrollButton").onclick = function () {
+        var nowScroll = document.body.scrollTop,
+                flag = "up";
+
+        var funScroll = function () {
+            var top = document.body.scrollTop;
+            if (flag == "up") {
+                top -= 5;
+                if (top <= 0) {
+                    top = 0;
+                    flag = "down";
+                }
+            } else if (flag == "down") {
+                top += 5;
+                if (top >= nowScroll) {
+                    top = nowScroll;
+                    flag = "stop";
+                }
+            } else {
+                return;
+            }
+
+            document.body.scrollTop = top;
+
+            requestAnimationFrame(funScroll);
+        };
+
+        if (nowScroll) {
+            funScroll()
+        }
+    };
+</script>
+</body>
+</html>

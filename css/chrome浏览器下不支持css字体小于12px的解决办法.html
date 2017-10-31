@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="initial-scale=0.5,maximum-scale=0.5,user-scalable=no"/>-->
+    <!--width=device-width,-->
+    <title>chrome谷歌浏览器下不支持css字体小于12px的解决办法</title>
+    <style>
+        body{
+            font-size: 14px;
+        }
+        p {
+            text-align: left;
+        }
+
+
+        span {
+            text-align: left;
+            display: block;
+        }
+
+        .fs-20 {
+            font-size: 20px;
+        }
+
+        .fs-12 {
+            font-size: 12px;
+        }
+
+        .fs-11 {
+            width: 100px;
+            font-size: 22px;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            margin-left: -25px; /* 缩放元素后不能左对齐 = with * scale(0.5) */
+        }
+
+        .fs-10 {
+            width: 100px;
+            font-size: 20px;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            margin-left: -25px;
+        }
+
+        .fs-9 {
+            width: 100px;
+            font-size: 18px;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            margin-left: -25px;
+        }
+
+        .fs-8 {
+            width: 100px;
+            font-size: 16px;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            margin-left: -25px;
+        }
+
+        .fs-10-2 {
+            font-size: 12px;
+            zoom: .84;
+            /*width: 100px;*/
+            /*height: 100px;*/
+            display: inline-block;
+            vertical-align: middle;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+
+<h4>方法一</h4>
+
+<p>一般用于移动端小字体的显示</p>
+
+<p style="width: 400px;">
+    transform: scale(x, y) scale的缩放占据的原始尺寸不变，页面布局不会发生变化。 只会影响浏览器的重绘，不会引起浏览器的重排，所以缩放元素后不能左对齐，
+    需要设置margin-left为width * scale的负边距
+</p>
+
+<p><span class="fs-20">20px</span></p>
+
+<p><span class="fs-12">12px</span></p>
+
+<p><span class="fs-11">11px</span></p>
+
+<p><span class="fs-10">10px</span></p>
+
+<p><span class="fs-9">9px</span></p>
+
+<p><span class="fs-8">8px</span></p>
+
+<h4>zoom的缩放可以改变了元素占据的空间大小(这个demo中试了没用效果)</h4>
+
+<p>zoom的兼容性不详</p>
+
+<p>zoom CSS 属性会根据 @viewport 来初始化一个缩放因数。 当设置`zoom:1/100%`时表示不缩放。
+    而当设置`zoom:2/200%`时该标签则会放大为原来的两倍，反之亦然。</p>
+
+<p><span class="fs-10-2">10px</span></p>
+
+
+<p>chrome浏览器本身是不支持小于12px的字体大小,还是通过调整其他样式来达到效果比较好,还是不建议用上面的2中方法</p>
+</body>
+</html>

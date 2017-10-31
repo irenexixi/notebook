@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js获取dom元素位置和尺寸大小</title>
+    <link rel="stylesheet" href="../layout/css/reset.css"/>
+    <style>
+        #divParent {
+            position: relative;
+            padding: 10px;
+            background-color: #aaa;
+        }
+
+        #divDisplay {
+            background-color: #0f0;
+            margin: 30px;
+            padding: 10px;
+            height: 200px;
+            width: 200px;
+            border: solid 3px #f00;
+        }
+    </style>
+</head>
+<body>
+
+<div id="divParent">
+    parent
+    <div id="divDisplay"></div>
+</div>
+
+<div>
+    <a href="http://www.cnblogs.com/dolphinX/archive/2012/11/19/2777756.html">来源</a>
+</div>
+
+<script>
+    window.onload = function () {
+        var div = document.getElementById('divDisplay');
+
+        var clientHeight = div.clientHeight;
+        var clientWidth = div.clientWidth;
+        div.innerHTML += 'clientHeight: ' + clientHeight + '<br/>';
+        div.innerHTML += 'clientWidth: ' + clientWidth + '<br/>';
+
+        var clientLeft = div.clientLeft;
+        var clientTop = div.clientTop;
+        div.innerHTML += 'clientLeft: ' + clientLeft + '<br/>';
+        div.innerHTML += 'clientTop: ' + clientTop + '<br/>';
+
+        var offsetHeight = div.offsetHeight;
+        var offsetWidth = div.offsetWidth;
+        div.innerHTML += 'offsetHeight: ' + offsetHeight + '<br/>';
+        div.innerHTML += 'offsetWidth: ' + offsetWidth + '<br/>';
+
+        var offsetLeft = div.offsetLeft;
+        var offsetTop = div.offsetTop;
+        div.innerHTML += 'offsetLeft: ' + offsetLeft + '<br/>';
+        div.innerHTML += 'offsetTop: ' + offsetTop + '<br/>';
+
+        var offsetParent = div.offsetParent;
+        div.innerHTML += 'offsetParent: ' + offsetParent.id + '<br/>';
+    }
+</script>
+
+<div>
+    <p>
+        <strong>clientHeight</strong> 和 <strong>clientWidth</strong> 用于描述元素内尺寸，是指 元素内容 + 内边距 大小，
+        不包括边框（IE下实际包括）、外边距、滚动条部分
+    </p>
+
+    <p> clientHeight = divDisplay.height + divDisplay.paddingTop * 2 </p>
+
+    <p> clientWidth = divDisplay.width + divDisplay.paddingLeft * 2 </p>
+</div>
+
+<div>
+    <p>
+        <strong>clientTop</strong> 和 <strong>clientLeft</strong> 返回内边距的边缘和边框的外边缘之间的水平和垂直距离，也就是左，
+        上边框宽度(等于border宽度)
+    </p>
+
+    <p> clientTop = divDisplay.borderTopWidth </p>
+
+    <p> clientLeft = divDisplay.borderLeftWidth </p>
+</div>
+
+<div>
+    <p><strong>offsetHeight</strong> 和 <strong>offsetWidth</strong> 用于描述元素外尺寸，是指 元素内容 + 内边距 + 边框，不包括外边距和滚动条部分</p>
+
+    <p> offsetHeight = divDisplay.height + divDisplay.paddingTop * 2 + divDisplay.borderTopWidth * 2</p>
+
+    <p> offsetWidth = divDisplay.width + divDisplay.paddingLeft * 2 + divDisplay.borderTopWidth * 2</p>
+</div>
+<div>
+
+    <p><strong>offsetTop</strong> 和 <strong>offsetLeft</strong> 表示该元素的左上角（边框外边缘）与已定位的父容器（offsetParent对象）左上角的距离</p>
+
+    <p> offsetLeft = divDisplay.marginLeft + divParent.paddingLeft;</p>
+
+    <p> offsetTop = divDisplay.marginTop + divParent.paddingTop;</p>
+</div>
+
+</body>
+</html>

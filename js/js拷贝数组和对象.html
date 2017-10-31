@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拷贝数组或对象</title>
+</head>
+<body>
+
+<script>
+    //克隆对象
+    var cloneObj = function (obj) {
+        var newObj = {};
+        for (var p in obj)
+            newObj[p] = obj[p];
+        return newObj;
+    };
+
+    var obj = {
+        name: 'qqli',
+        age: 18,
+        hobby: ['看书', '逗狗'],
+        friends: [
+            {name: 'dt'},
+            {name: 'yuyou'}
+        ]
+    };
+
+    var cloneObj = cloneObj(obj);
+    console.log('obj', obj);
+    cloneObj.name = 'qqli2';
+    console.log('cloneObj', cloneObj);
+
+
+    //拷贝数组
+    //浅拷贝
+    var a = ['a', 'b', 'c'];
+    var b = a.slice(0);
+    a.push('w');
+    console.log('a', a);
+    b.push('d');
+    console.log('b', b);
+
+    var c = ['a', 'b', 'c'];
+    var d = c.concat();
+    c.push('w');
+    console.log('c', c);
+    d.push('d');
+    console.log('d', d);
+</script>
+
+</body>
+</html>

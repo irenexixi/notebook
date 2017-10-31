@@ -1,0 +1,30 @@
+
+chrome 表单自动填充后，input 文本框的背景会变成偏黄色的，是由于 chrome 会默认给自动填充的 input 表单加上
+input:-webkit-autofill 私有属性，然后对其赋予以下样式：
+
+input:-webkit-autofill {
+    background-color: rgb(250, 255, 189);
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+
+重写-webkit-autofill
+
+input:-webkit-autofill {
+    background-color: #fff;
+    background-image: none;
+    color: #000;
+}
+
+重置发现并没有用，网上有其他办法
+
+方法一：
+
+设置 -webkit-box-shadow: 0 0 0px 1000px white inset;
+给input设置内置阴影！而且一定要大，至少要比你的input本身大！不过，box-shadow是很慢的！而且，如果你的input是用图片做背景的话，
+是没有办法做这么干的！所以在实际开发中，到底是怎么选择，那还得自己权衡！
+
+方法二：
+禁用input的记录就能ok！比如：<input type="text"  autocomplete="off">，如此当你点击了input时它就不会有那一列表了！整个世界也就干净了！
+当然，如果你能忍受那黄色，也可以把它给“on”了，或者不设置，因为autocomplet默认就是'on'的！
+

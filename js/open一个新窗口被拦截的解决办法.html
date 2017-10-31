@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window.open被拦截的解决办法</title>
+</head>
+<body>
+<a href="http://www.cnblogs.com/htzan/p/6202826.html">参考</a>
+
+<script>
+    //写法1
+    function openwin(url) {
+        var a = document.createElement("a"); //创建a对象
+        a.setAttribute("href", url);
+        a.setAttribute("target", "_blank");
+        a.setAttribute("id", "camnpr");
+        document.body.appendChild(a);
+        a.click(); //执行当前对象
+        setTimeout(function () {
+            document.body.removeChild(document.getElementById('camnpr'))
+        },200)
+    }
+
+    //写法2
+    function openUrl(url) {
+        var a = $('<a href="'+url+'" target="_blank"></a>')[0];
+        var e = document.createEvent('MouseEvents');
+        e.initEvent('click', true, true);
+        a.dispatchEvent(e);
+    }
+
+    //调用方法openwin(url) / openUrl(url)
+    //原理都是通过创建一个a标签对象，通过里面自带的target执行跳转
+
+    openwin('https://www.baidu.com/'); //ie浏览器还是会拦截，允许后就可以打开了
+//    window.open('https://www.baidu.com/')
+</script>
+</body>
+</html>

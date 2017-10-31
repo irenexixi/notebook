@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new Array 与 [] 的区别</title>
+</head>
+<body>
+<p>找了很多资料、也和同事请教这个问题</p>
+
+<div>
+
+    <p>[]是字面量，new Array是对象，可以把[]当成一个已经new好的Array(javascript引擎内部做的)，后者占用内存大点</p>
+
+    <p>
+        You never need to use new Object() in JavaScript. Use the object literal {} instead.
+        Similarly, don’t use new Array(), use the array literal [] instead. Arrays in JavaScript work
+        nothing like the arrays in Java, and use of the Java-like syntax will confuse you.
+
+        Do not use new Number, new String, or new Boolean. These forms produce unnecessary object wrappers.
+        Just use simple literals instead.
+    </p>
+</div>
+
+<script>
+    //new Array 最有作用就是拼接重复字符串
+    new Array(10).join('*');
+
+    (new Array(2)).map(x => '*');          //[undefined × 2]
+    [undefined, undefined].map(x => '*');  // ["*", "*"]
+
+    new Array('10');            //['10']
+    new Array('10') == ['10'];  //false 因为数组是引用类型，地址不一样
+
+    Math.pow(2, 32); //4294967296
+    new Array(4294967296); //Uncaught RangeError: Invalid array length at <anonymous>:1:1
+    new Array(-1); //Uncaught RangeError: Invalid array length at <anonymous>:1:1
+
+
+    new Array(100).join('*').split('*').map((x, i) => i + 1);
+
+    Array.from({length: 100}, (v, k) => k);
+
+</script>
+</body>
+</html>
