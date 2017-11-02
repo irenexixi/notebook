@@ -24,6 +24,7 @@
             <li><router-link to="/axiosTest">Axios</router-link></li>
             <li><router-link to="/markdown-test">MarkdownTest</router-link></li>
             <li><router-link to="/vue-markdown-test">VueMarkdownTest</router-link></li>
+            <li><router-link to="/push-js-test">PushJsTest</router-link></li>
         </ul>
     </div>
 </template>
