@@ -1,0 +1,43 @@
+// 访问 https://www.readnovel.com/chapter/6873964404886203/18453030180749321进行测试
+
+(function () {
+    const loadScript = url => {
+        return new Promise((resolve, _) => {
+            const script = document.createElement("script")
+            script.type = 'text/javascript'
+            script.onload = () => {
+                resolve()
+            }
+            script.src = url
+            document.querySelector("head").appendChild(script)
+        })
+
+    }
+
+    const jszipPromise = loadScript('https://stuk.github.io/jszip/dist/jszip.js')
+    const jsZipUtilsPromise = loadScript('https://stuk.github.io/jszip-utils/dist/jszip-utils.js')
+    const jsVerndorPromise = loadScript('https://stuk.github.io/jszip/vendor/FileSaver.js')
+
+    const getText = () => {
+        const textArray  = []
+        document.querySelectorAll(".read-content.j_readContent p").forEach(item => {
+            textArray.push(item.textContent)
+        })
+        return textArray.join("\n")
+    }
+
+
+    Promise.all([jszipPromise, jsZipUtilsPromise, jsVerndorPromise]).then(() => {
+        console.log('脚本注入成功！')
+        const zip = new JSZip()
+        zip.file("novel.txt", getText())
+        zip.generateAsync({ type: "blob" }, metadata => {
+            const msg = "下载进度 : " + metadata.percent.toFixed(2) + " %";
+            console.log(msg)
+        }).then(blob => {
+            saveAs(blob, 'novels.zip')
+            console.log('下载完毕！')
+        })
+    })
+
+})()

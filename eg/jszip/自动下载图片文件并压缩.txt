@@ -1,0 +1,65 @@
+/**
+ * 
+ * 下载页面壁纸 http://www.ivsky.com/bizhi/youbaojiding_v44340/
+ */
+
+
+
+(function () {
+    const loadScript = url => {
+        return new Promise((resolve, _) => {
+            const script = document.createElement("script")
+            script.type = 'text/javascript'
+            script.onload = () => {
+                resolve()
+            }
+            script.src = url
+            document.querySelector("head").appendChild(script)
+        })
+
+    }
+
+    const jszipPromise = loadScript('https://stuk.github.io/jszip/dist/jszip.js')
+    const jsZipUtilsPromise = loadScript('https://stuk.github.io/jszip-utils/dist/jszip-utils.js')
+    const jsVerndorPromise = loadScript('https://stuk.github.io/jszip/vendor/FileSaver.js')
+
+    const urlToPromise = url => {
+        return new Promise((resolve, reject) => {
+            JSZipUtils.getBinaryContent(url, (err, data) => {
+                if (err) {
+                    console.log(url)
+                    reject(err);
+                } else {
+                    resolve(data);
+                }
+            })
+        })
+    }
+
+    const getImagesPromise = () => {
+        const urls = []
+        const hostname = location.hostname
+        document.querySelectorAll('.il_img a>img').forEach(item => {
+            const url = item.src.replace('/t/', '/pre/')
+            ~url.indexOf('jpg') && urls.push(url)
+        })
+        return urls.map(url => urlToPromise(url))
+    }
+
+    Promise.all([jszipPromise, jsZipUtilsPromise, jsVerndorPromise]).then(() => {
+        console.log('脚本注入成功！')
+        const zip = new JSZip()
+        const promiseArray = getImagesPromise()
+        promiseArray.forEach((promise, index) => {
+            zip.file(`pic${index}.jpg`, promise, { binary: true });
+        })
+        zip.generateAsync({ type: "blob" }, metadata => {
+            const msg = "下载进度 : " + metadata.percent.toFixed(2) + " %";
+            console.log(msg)
+        }).then(blob => {
+            saveAs(blob, 'pictures.zip')
+            console.log('下载完毕！')
+        })
+    })
+
+})()
