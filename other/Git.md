@@ -46,7 +46,8 @@ or
 
     1. git pull origin branchName
     2. git branch newBranchName
-    3. git push origin newBranchName   //push到指定分支
+    3. git pull origin newBranchName
+    4. git push origin newBranchName   //push到指定分支
     
 
 **查看某一个文件的详细提交记录**

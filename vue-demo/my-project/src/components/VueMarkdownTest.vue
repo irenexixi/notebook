@@ -57,10 +57,15 @@
             uploadimg($e){
                 // upload files in one request.
                 console.log('img_file', this.img_file);
+
                 var formdata = new FormData();
                 for(var _img in this.img_file){
+                    console.log('img_file444', this.img_file[_img]);
                     formdata.append(_img, this.img_file[_img]);
                 }
+
+                formdata.append('test','qqli');
+
                 axios({
                     url: 'http://127.0.0.1/index.php',
                     method: 'post',
