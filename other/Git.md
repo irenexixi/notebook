@@ -79,7 +79,7 @@ or
     git merge branchName
 
 **回滚代码**
-    
+ 
 	git reset --hard commit-code 回滚代码到某次提交
     git reset --hard HEAD 回滚代码到远程最新
     git clean -dfx  清除当前本地分支的代码
