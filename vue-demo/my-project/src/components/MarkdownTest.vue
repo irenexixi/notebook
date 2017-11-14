@@ -12,7 +12,7 @@
 
 <script>
     import {markdown} from 'markdown';
-    console.log(markdown);
+    //console.log(markdown);
 
     export default {
         name: 'MarkdownTest',

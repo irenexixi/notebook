@@ -19,6 +19,8 @@
     // use
     //Vue.use(mavonEditor)
 
+    console.log('mavonEditor', mavonEditor);
+
     export default {
         name: 'VueMarkdownTest',
 
@@ -42,16 +44,16 @@
                 return document.getElementById(id);
             },
             submit(){
-                console.log(this.editorVal);
+//                console.log(this.editorVal);
             },
             imgAdd(pos, $file){
-                console.log('pos', pos)
-                console.log('$file', $file)
+//                console.log('pos', pos)
+//                console.log('$file', $file)
                 this.img_file[pos] = $file;
                 this.uploadimg();
             },
             imgDel(pos){
-                console.log('pos', pos)
+//                console.log('pos', pos)
                 delete this.img_file[pos];
             },
             uploadimg($e){
