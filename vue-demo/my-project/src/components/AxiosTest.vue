@@ -10,12 +10,12 @@
 </template>
 
 <script>
-    import "es6-promise";
+    import 'es6-promise';
     import axios from 'axios';
     import md5 from 'md5';
     import {Message} from 'element-ui';
-    import isEmpty from "lodash.isempty";
-    import qs from "querystring";
+    import isEmpty from 'lodash.isempty';
+    import qs from 'querystring';
 
     const METHODS = {
         GET: 'get',
@@ -37,7 +37,7 @@
         return new Promise((resolve, reject) => {
 
             if (resp && data.code == 200) {
-                data.remark && Message({message: data.remark, type: "success", showClose: false});
+                data.remark && Message({message: data.remark, type: 'success', showClose: false});
 
                 resolve(resp);
             } else if (resp && data.code == 401) {
@@ -48,16 +48,16 @@
 
             } else if (resp && data.code == 424) {
                 history.go(-1);
-                Message.error({message: '您没有权限访问', type: "error", showClose: false});
+                Message.error({message: '您没有权限访问', type: 'error', showClose: false});
             } else {
                 reject(resp);
-                data.remark && Message.error({message: data.remark, type: "error", showClose: false});
+                data.remark && Message.error({message: data.remark, type: 'error', showClose: false});
             }
         });
     };
 
     const request = (url, params, headers = {}, method = METHODS.GET, jsonType = true) => {
-        let sessionId = localStorage.getItem('sessionId') || "1f01949454ab9284738a2a7a5b6839be";
+        let sessionId = localStorage.getItem('sessionId') || '1f01949454ab9284738a2a7a5b6839be';
         var options = {
             headers: {
                 'Content-Type': jsonType ? 'application/json;charset=UTF-8' : 'application/x-www-form-urlencoded',
@@ -109,7 +109,7 @@
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
     h1, h2 {
         font-weight: normal;

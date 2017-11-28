@@ -31,7 +31,7 @@
                 _this.editor = this;
                 _this.update(preview);
             }
-            new Editor(this.$("text-input"), this.$("preview"));*/
+            new Editor(this.$('text-input'), this.$('preview'));*/
         },
 
         methods: {
@@ -40,13 +40,13 @@
             },
 
             update() {
-                this.$("preview").innerHTML = markdown.toHTML(this.$("text-input").value);
+                this.$('preview').innerHTML = markdown.toHTML(this.$('text-input').value);
             }
         }
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
     h1, h2 {
         font-weight: normal;

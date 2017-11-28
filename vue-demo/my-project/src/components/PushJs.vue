@@ -71,9 +71,9 @@
             },
 
             demo3() {
-                Push.create("Hello world!", {
+                Push.create('Hello world!', {
                     tag: 'foo',
-                    body: "How's it hangin'?",
+                    body: 'How\s it hangin?',
                     icon: './icon.png',
                     timeout: 10000, // 4s后关闭
                     url: 'https://pushjs.org/docs/options.html',
@@ -81,9 +81,9 @@
             },
 
             demo2() {
-                Push.create("Hello world!", {
+                Push.create('Hello world!', {
                     tag: 'foo',
-                    body: "How's it hangin'?",
+                    body: 'How\'s it hangin?',
                     icon: './icon.png',
                     requireInteraction: true, //当设置为true时,通知将不会关闭,除非用户手动关闭或点击它
                     onClick: function () {
@@ -98,9 +98,9 @@
             },
 
             demo1() {
-                Push.create("Hello world!", {
+                Push.create('Hello world!', {
                     tag: 'foo',
-                    body: "How's it hangin'?",
+                    body: 'How\'s is it hangin?',
                     icon: './icon.png',
                     timeout: 100000, // 4s后关闭
                     url: 'https://pushjs.org/docs/options.html',
@@ -118,7 +118,7 @@
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
     h1, h2 {
         font-weight: normal;

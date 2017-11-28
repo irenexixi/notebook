@@ -20,7 +20,7 @@
 
         <h2>My Demo</h2>
         <ul>
-            <li>
+            <!--<li>
                 <router-link to="/elementUiTest">ElementUi Upload</router-link>
             </li>
             <li>
@@ -34,31 +34,29 @@
             </li>
             <li>
                 <router-link to="/push-js-test">PushJsTest</router-link>
-            </li>
+            </li>-->
         </ul>
 
-        <count :index="1"></count>
-        <count :index="2"></count>
-        <count :index="3"></count>
+        <!--<count :index="1"></count>-->
+        <!--<count :index="2"></count>-->
+        <!--<count :index="3"></count>-->
     </div>
 </template>
 
 <script>
-    import Count from './Count';
-
-    console.log('Count', Count);
+    // import Count from './Count';
 
     export default {
         name: 'HelloWorld',
 
-        components: {Count},
+        //components: {Count},
 
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App'
-            }
+            };
         }
-    }
+    };
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
