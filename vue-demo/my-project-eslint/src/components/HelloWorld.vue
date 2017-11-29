@@ -28,13 +28,13 @@
             </li>
             <li>
                 <router-link to="/markdown-test">MarkdownTest</router-link>
-            </li>
+            </li>-->
             <li>
                 <router-link to="/vue-markdown-test">VueMarkdownTest</router-link>
             </li>
             <li>
                 <router-link to="/push-js-test">PushJsTest</router-link>
-            </li>-->
+            </li>
         </ul>
 
         <!--<count :index="1"></count>-->
@@ -49,9 +49,9 @@
     export default {
         name: 'HelloWorld',
 
-        //components: {Count},
+        // components: {Count},
 
-        data () {
+        data() {
             return {
                 msg: 'Welcome to Your Vue.js App'
             };

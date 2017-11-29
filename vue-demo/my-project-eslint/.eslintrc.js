@@ -18,7 +18,8 @@ module.exports = {
     // add your custom rules here
     'rules': {
         //"indent": ["error", 4],
-        'indent': ["error", "tab"],
+        'space-before-function-paren': ["error", "never"],
+        'indent': ["error", 4, { "SwitchCase": 1,  "ArrayExpression": 1 }],
         //'semi': 0,
         "semi": ["error", "always"],
         // allow paren-less arrow functions

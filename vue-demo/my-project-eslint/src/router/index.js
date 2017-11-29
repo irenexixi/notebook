@@ -3,15 +3,15 @@ import Router from 'vue-router';
 import HelloWorld from '@/components/HelloWorld';
 // import ElementUiTest from '@/components/ElementUiTest';
 // import AxiosTest from '@/components/AxiosTest';
-// import MarkdownTest from '@/components/MarkdownTest';
-// import VueMarkdownTest from '@/components/VueMarkdownTest';
-// import PushJsTest from '@/components/PushJs';
+import MarkdownTest from '@/components/MarkdownTest';
+import VueMarkdownTest from '@/components/VueMarkdownTest';
+import PushJsTest from '@/components/PushJs';
 
 Vue.use(Router);
 
 export default new Router({
     routes: [
-        /*{
+        {
             path: '/push-js-test',
             name: 'PushJsTest',
             component: PushJsTest
@@ -26,7 +26,7 @@ export default new Router({
             name: 'MarkdownTest',
             component: MarkdownTest
         },
-        {
+        /* {
             path: '/elementUiTest',
             name: 'ElementUiTest',
             component: ElementUiTest
@@ -35,7 +35,7 @@ export default new Router({
             path: '/axiosTest',
             name: 'AxiosTest',
             component: AxiosTest
-        },*/
+        }, */
         {
             path: '/',
             name: 'Hello',
