@@ -30,21 +30,19 @@ or
     git config --list 查看已设配置
     git config  .git_commit.template 配置commit文件
 
-
 **文件状态流程**
 
-    untracked -> unmodified -> modified ->stage
+    untracked -> unmodified -> modified -> stage
     
 **查看远程分支**
     
     git branch -r
-    
         
 **拉取远程分支并创建本地分支**
     
     git checkout -b 本地分支名x origin/远程分支名x
-    使用该方式会在本地新建分支x，并自动切换到该本地分支x。
-    采用此种方法建立的本地分支会和远程分支建立映射关系。
+    使用该方式会在本地新建分支x，并自动切换到该本地分支x
+    采用此种方法建立的本地分支会和远程分支建立映射关系
     
     git fetch origin 远程分支名x:本地分支名x
     使用该方式会在本地新建分支x，但是不会自动切换到该本地分支x，需要手动checkout
@@ -64,7 +62,6 @@ or
     3. git pull origin newBranchName
     4. git push origin newBranchName   //push到指定分支
     
-
 **查看某一个文件的详细提交记录**
 
 	git log -p filename
@@ -79,15 +76,15 @@ or
     git merge branchName
 
 **回滚代码**
+
+    1. git revert commit码 revert某一次提交？push后的提交也可以revert？
+    2. git checkout . #本地所有修改的，没有提交的，都返回到原来的状态
+    3. git clean -dfx  清除当前本地分支的代码，包括新增的文件或文件夹
  
 	git reset --hard commit-code 回滚代码到某次提交
     git reset --hard HEAD 回滚代码到远程最新
-    git clean -dfx  清除当前本地分支的代码
-
-	git checkout . #本地所有修改的，没有提交的，都返回到原来的状态
 	git reset --hard HASH #返回到某个节点，不保留修改
 	git reset --soft HASH #返回到某个节点，保留修改
-
 
 **对已经存在的commit进行再次提交**
 
@@ -109,13 +106,14 @@ or
 
 **mvn使用方法**
 
-
     clean: mvn clean install (server)
 
     launch: mvn -Djetty.port=8087 jetty:run (admin)
             mvn clean install -U (更新包)
             mvn clean install -Dmaven:test(不执行单元测试的编译)
 
+**git 引起冲突**
+    1. 
 
 Git暂存管理
 

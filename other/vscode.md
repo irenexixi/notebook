@@ -11,8 +11,10 @@ http://www.cnblogs.com/bindong/p/6045957.html
 插件
 prettier js格式化
 
+CMD + Shift + P, 格式化文件
 Ctrl + p 搜索文件
-Ctrl + F, command + F 当前页面搜索
+Ctrl + E/F, Command + E/F 当前文件查找
+Command + alt + F 当前文件查找替换
 Ctrl+[, Ctrl+] 代码行缩进 
 Shift+Alt+Up 向上复制一行
 Shift+Alt+Down 向下复制一行 
