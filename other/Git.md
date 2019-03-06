@@ -10,7 +10,7 @@
     ssh-keygen -t rsa -C "645946774@qq.com"  ->　/c/Users/qqli/.ssh/id_rsa
 or 
 
-    ssh-keygen -t rsa -C "liqianqian@migu.com"  ->　/c/Users/qqli/.ssh/id_rsa
+    ssh-keygen -t rsa -C "email"  ->　/c/Users/qqli/.ssh/id_rsa
 
 拷贝秘钥
 

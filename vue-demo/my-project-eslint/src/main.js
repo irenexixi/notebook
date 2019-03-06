@@ -4,11 +4,12 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
-import {Upload, Button} from 'element-ui';
+import {Upload, Button, Dialog} from 'element-ui';
 import 'element-ui/lib/theme-default/index.css';
 
 Vue.use(Upload);
 Vue.use(Button);
+Vue.use(Dialog);
 
 Vue.config.productionTip = false;
 

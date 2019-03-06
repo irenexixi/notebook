@@ -1,4 +1,13 @@
 
+MAC下使用nginx
+http://www.aichengxu.com/nginx/2570124.htm
+启动：
+cd usr/local/nginx/bin
+sudo ./nginx  
+重启
+sudo ./nginx -s reload
+
+
 Windows: cmd 控制台下
 
 下载文档版本包并解压, 并进入目录 e.g. C:\Users\qqli\Downloads\nginx-1.10.2\nginx-1.10.2

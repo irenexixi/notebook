@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>mail</title>
+</head>
+<body style="width:700px; margin:0 auto;">
+    <table width="700" border="0" cellspacing="0" cellpadding="0" style="font-family:'微软雅黑',Helvetica,Arial,sans-serif;font-size:14px;table-layout:fixed;"  width="100%">
+        <tbody>
+            <tr >
+                <td align="center" style="padding:0px 0px 20px 0px;">
+                    <p class=" color333 fs18" style="height: 28px;line-height: 28px;"><img src="cid:logo" alt="咪咕云开发" width="126" style="vertical-align: middle;"> — 知会提醒</p>
+                </td>   
+            </tr>
+            
+            <tr class="hello bgfff">
+                <td style=" border:1px solid #E3E9ED; padding:15px 40px;"> <p class="color333">${username}，您好！有1项${workType}工作知会给您，请知晓。</p></td>
+            </tr>
+            
+            <tr class="bgfff">
+                <td colspan="4" style="border-left:1px solid #E3E9ED;border-right:1px solid #E3E9ED;">
+                    <table width="700" width="100%" border="0" cellpadding="5" cellspacing="0" class="content" style="table-layout:fixed;">
+                            <tbody >
+                                <tr>
+                                    <td>
+                                        <table width="700" width="100%" border="0" cellpadding="5" cellspacing="0" class="content">
+                                            <tr>
+                                                <td width="120" colspan="4" style="padding:16px 40px 10px 40px;">
+                                                    <p class="contTitle" style="font-weight: bold;color:#0486FE;">· <a href="${url}" style="color:#0486FE;font-weight:normal;">${title}</a></p>
+                                                </td>
+                                                <td width="100"></td>
+                                                <td width="330"></td>
+                                                <td width="150"></td>
+                                            </tr>
+                                            <!-- 当前状态 -->
+                                            <tr>
+                                                <td width="120" style="padding:6px 0px 6px 40px; text-indent:10px;">
+                                                    <p  class="color666 " style="font-size:12px;">当前状态</p>
+                                                </td>
+                                                <td width="100" colspan="3" style="padding:6px 40px 6px 0px;">
+                                                    <p  class="color333 " style="font-size:12px;">|&nbsp;&nbsp;&nbsp;${curStatus}</p>
+                                                </td>
+                                                <td width="330"></td>
+                                                <td width="150"></td>
+                                            </tr>
+                                            
+                                            <!-- 创建人 -->
+                                            <tr>
+                                                <td width="120" style="padding:6px 0px 6px 50px;">
+                                                    <p  class="color666 " style="font-size:12px;">创建人</p>
+                                                </td>
+                                                <td width="100" colspan="3" style="padding:6px 40px 6px 0px;">
+                                                    <p  class="color333 " style="font-size:12px;">|&nbsp;&nbsp;&nbsp;张宿东</p>
+                                                </td>
+                                                <td width="330"></td>
+                                                <td width="150"></td>
+                                            </tr>
+                                            
+                                            <!-- 知会人 -->
+                                            <tr>
+                                                <td width="120" style="padding:6px 0px 6px 50px;">
+                                                    <p  class="color666 " style="font-size:12px;">知会人</p>
+                                                </td>
+                                                <td width="100" colspan="3" style="padding:6px 40px 6px 0px;">
+                                                    <p  class="color333 " style="font-size:12px;">|&nbsp;&nbsp;&nbsp;程道蕾</p>
+                                                </td>
+                                                <td width="330"></td>
+                                                <td width="150"></td>
+                                            </tr>
+                                            
+                                            <!-- 上一处理人 -->
+                                            <tr>
+                                                <td width="120" style="padding:6px 0px 24px 50px; width:120px;">
+                                                    <p  class="color666 " style="font-size:12px;">上一处理人</p>
+                                                </td>
+                                                <td width="100" style="padding:6px 0px 24px 0px; width:100px;">
+                                                    <p class="color333 " style="font-size:12px;">|&nbsp;&nbsp;&nbsp;刘琼瑶</p>
+                                                </td>
+                                                <td width="330" class="color666" style="padding:6px 0px 24px 0;font-size:12px;word-break:break-all;width:330px;">
+                                                    <p class="color666 " style="font-size:12px;">上线该需求</p>
+                                                </td>
+                                                <td width="150" style="padding:6px 40px 24px 0px; width:150px;">
+                                                    <p  class="color999 " style="font-size:12px;">${updateTime}</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </table>
+                                                                                
+                </td>
+            </tr>
+            <tr>
+                <td style=" border-top:1px solid #E3E9ED;padding:16px 0px;">
+                    <div class="browserTips">
+                        <p style="color:#8E929A ;  text-align: center; font-size:12px;">请使用chrome浏览器打开链接。浏览器兼容性问题后续会解决。给您带来不便，敬请谅解。</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+<style>
+    *{
+    margin:0;
+    padding:0;
+    font-family:PingFangSC-Regular ;
+    }
+    body{
+        background-color: #F8F8F8;
+        padding:10px 0;
+        width:700px;
+        margin:0 auto;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-weight: normal;
+    }
+    em{
+        font-style: normal;
+    }
+    .bgfff{
+        background:#fff;
+    }
+    .logo{
+        width:230px;
+        margin:20px auto;
+        height:28px;
+        line-height: 28px;
+        
+
+    }
+    .logo .img{
+        background:url(./logo.png) no-repeat;
+        height:25px;
+    }
+    .fs12{ 
+        font-size:12px;
+    }
+    .fs14{
+        font-size:14px;
+    }
+    .fs18{
+        font-size:18px;
+    }
+    .color333{
+        color:#333;
+    }
+    .color666{
+        color:#666;
+    }
+    .color999{
+        color:#999;
+    }
+    .ongoingTilte {
+        border-bottom: 1px solid #EEE;
+        padding: 18px 0px 14px 0px;
+        width: 520px;
+        margin: 0 auto;
+    }
+
+</style>
+</body>
+</html>

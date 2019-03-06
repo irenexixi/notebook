@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>顶层变量</title>
+</head>
+<body>
+<script>
+    (function test() {
+        console.log('arguments', arguments);
+        // console.log('module', module);
+        // console.log('require', require);
+    })();
+        // console.log('module', module);
+        // console.log('require', require);
+        
+    (function (global, factory) {
+        // console.log('exports', exports)
+        // console.log('module', module)
+        // console.log('define', define)
+        typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+        typeof define === 'function' && define.amd ? define(factory) :
+        (global.wangEditor = factory());
+    }(this, (function () { 'use strict';})))
+</script>
+</body>
+</html>

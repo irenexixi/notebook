@@ -20,12 +20,13 @@
 
         <h2>My Demo</h2>
         <ul>
-            <!--<li>
+            <li>
                 <router-link to="/elementUiTest">ElementUi Upload</router-link>
             </li>
             <li>
                 <router-link to="/axiosTest">Axios</router-link>
             </li>
+            <!--
             <li>
                 <router-link to="/markdown-test">MarkdownTest</router-link>
             </li>-->
@@ -34,6 +35,9 @@
             </li>
             <li>
                 <router-link to="/push-js-test">PushJsTest</router-link>
+            </li>
+            <li>
+                <router-link to="/html2canvas">Html2canvas</router-link>
             </li>
         </ul>
 

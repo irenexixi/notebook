@@ -1,0 +1,13 @@
+{
+    "files.autoSave": "on",
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        { "language": "vue", "autoFix": true }
+    ],
+    "eslint.options": {
+        "plugins": ["html"]
+    },
+}
